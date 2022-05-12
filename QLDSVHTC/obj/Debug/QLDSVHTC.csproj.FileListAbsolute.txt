@@ -1,0 +1,14 @@
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\bin\Debug\QLDSVHTC.exe.config
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\bin\Debug\QLDSVHTC.exe
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\bin\Debug\QLDSVHTC.pdb
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.FormMain.resources
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.FormDN.resources
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.FormSV.resources
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.Properties.Resources.resources
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.csproj.GenerateResource.cache
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.exe.licenses
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.csproj.CoreCompileInputs.cache
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.exe
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.pdb
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.FormLH.resources
+C:\Users\lhhoa\source\repos\QLDSVHTC\QLDSVHTC\obj\Debug\QLDSVHTC.csproj.AssemblyReference.cache
