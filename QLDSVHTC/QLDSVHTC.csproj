@@ -83,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DS_SV1.cs">
+      <DependentUpon>DS_SV1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DS_SV1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

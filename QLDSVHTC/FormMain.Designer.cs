@@ -33,16 +33,16 @@ namespace QLDSVHTC
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnSINHVIEN = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.BTNDN = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLOPHOC = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDangNhap = new DevExpress.XtraBars.BarButtonItem();
             this.BTNTTK = new DevExpress.XtraBars.BarButtonItem();
             this.BTNTHOAT = new DevExpress.XtraBars.BarButtonItem();
-            this.BTNDANGXUAT = new DevExpress.XtraBars.BarButtonItem();
-            this.BTNNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.rpNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.BTNBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.rpHETHONG = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
@@ -63,18 +63,18 @@ namespace QLDSVHTC
             this.ribbonControl1.ExpandCollapseItem,
             this.ribbonControl1.SearchEditItem,
             this.btnSINHVIEN,
-            this.barButtonItem2,
-            this.BTNDN,
+            this.btnLOPHOC,
+            this.btnDangNhap,
             this.BTNTTK,
             this.BTNTHOAT,
-            this.BTNDANGXUAT});
+            this.btnLogout});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 7;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.BTNNHAPXUAT,
-            this.BTNBAOCAO,
-            this.ribbonPage1});
+            this.rpNHAPXUAT,
+            this.rpBAOCAO,
+            this.rpHETHONG});
             this.ribbonControl1.Size = new System.Drawing.Size(1213, 183);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
@@ -86,27 +86,26 @@ namespace QLDSVHTC
             this.btnSINHVIEN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSINHVIEN.ImageOptions.LargeImage")));
             this.btnSINHVIEN.Name = "btnSINHVIEN";
             this.btnSINHVIEN.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.btnSINHVIEN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnSINHVIEN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSINHVIEN_ItemClick);
             // 
-            // barButtonItem2
+            // btnLOPHOC
             // 
-            this.barButtonItem2.Caption = "LOP HOC";
-            this.barButtonItem2.Id = 2;
-            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.btnLOPHOC.Caption = "LOP HOC";
+            this.btnLOPHOC.Id = 2;
+            this.btnLOPHOC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLOPHOC.ImageOptions.Image")));
+            this.btnLOPHOC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLOPHOC.ImageOptions.LargeImage")));
+            this.btnLOPHOC.Name = "btnLOPHOC";
+            this.btnLOPHOC.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnLOPHOC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLOPHOC_ItemClick);
             // 
-            // BTNDN
+            // btnDangNhap
             // 
-            this.BTNDN.Caption = "DANG NHAP";
-            this.BTNDN.Id = 3;
-            this.BTNDN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BTNDN.ImageOptions.Image")));
-            this.BTNDN.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BTNDN.ImageOptions.LargeImage")));
-            this.BTNDN.Name = "BTNDN";
-            this.BTNDN.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.BTNDN.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            this.btnDangNhap.Caption = "DANG NHAP";
+            this.btnDangNhap.Id = 3;
+            this.btnDangNhap.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.Image")));
+            this.btnDangNhap.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.ImageOptions.LargeImage")));
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // BTNTTK
             // 
@@ -125,56 +124,56 @@ namespace QLDSVHTC
             this.BTNTHOAT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BTNTHOAT.ImageOptions.LargeImage")));
             this.BTNTHOAT.Name = "BTNTHOAT";
             this.BTNTHOAT.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.BTNTHOAT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BTNTHOAT_ItemClick_1);
             // 
-            // BTNDANGXUAT
+            // btnLogout
             // 
-            this.BTNDANGXUAT.Caption = "DANG XUAT";
-            this.BTNDANGXUAT.Id = 6;
-            this.BTNDANGXUAT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BTNDANGXUAT.ImageOptions.Image")));
-            this.BTNDANGXUAT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BTNDANGXUAT.ImageOptions.LargeImage")));
-            this.BTNDANGXUAT.Name = "BTNDANGXUAT";
-            this.BTNDANGXUAT.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnLogout.Caption = "DANG XUAT";
+            this.btnLogout.Id = 6;
+            this.btnLogout.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.Image")));
+            this.btnLogout.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLogout.ImageOptions.LargeImage")));
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
-            // BTNNHAPXUAT
+            // rpNHAPXUAT
             // 
-            this.BTNNHAPXUAT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpNHAPXUAT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup3});
-            this.BTNNHAPXUAT.Name = "BTNNHAPXUAT";
-            this.BTNNHAPXUAT.Text = "NHAP XUAT";
+            this.rpNHAPXUAT.Name = "rpNHAPXUAT";
+            this.rpNHAPXUAT.Text = "NHAP XUAT";
             // 
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnSINHVIEN);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnLOPHOC);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "QUAN LY";
             // 
-            // BTNBAOCAO
+            // rpBAOCAO
             // 
-            this.BTNBAOCAO.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpBAOCAO.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup2});
-            this.BTNBAOCAO.Name = "BTNBAOCAO";
-            this.BTNBAOCAO.Text = "BAO CAO";
+            this.rpBAOCAO.Name = "rpBAOCAO";
+            this.rpBAOCAO.Text = "BAO CAO";
             // 
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
-            // ribbonPage1
+            // rpHETHONG
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.rpHETHONG.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "HE THONG";
+            this.rpHETHONG.Name = "rpHETHONG";
+            this.rpHETHONG.Text = "HE THONG";
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.BTNDN);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnDangNhap);
             this.ribbonPageGroup1.ItemLinks.Add(this.BTNTTK);
             this.ribbonPageGroup1.ItemLinks.Add(this.BTNTHOAT);
-            this.ribbonPageGroup1.ItemLinks.Add(this.BTNDANGXUAT);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnLogout);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "HE THONG";
             // 
@@ -223,7 +222,7 @@ namespace QLDSVHTC
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.ItemLinks.Add(this.btnSINHVIEN);
-            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnLOPHOC);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "QUAN LY";
             // 
@@ -252,21 +251,21 @@ namespace QLDSVHTC
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.BarButtonItem btnSINHVIEN;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.BarButtonItem btnLOPHOC;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpHETHONG;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage BTNBAOCAO;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpBAOCAO;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage BTNNHAPXUAT;
+        private DevExpress.XtraBars.Ribbon.RibbonPage rpNHAPXUAT;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private DevExpress.XtraBars.BarButtonItem BTNDN;
+        private DevExpress.XtraBars.BarButtonItem btnDangNhap;
         private DevExpress.XtraBars.BarButtonItem BTNTTK;
         private DevExpress.XtraBars.BarButtonItem BTNTHOAT;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.BarButtonItem BTNDANGXUAT;
+        private DevExpress.XtraBars.BarButtonItem btnLogout;
         public System.Windows.Forms.ToolStripStatusLabel MAGV;
         public System.Windows.Forms.ToolStripStatusLabel HOTEN;
         public System.Windows.Forms.ToolStripStatusLabel NHOM;
