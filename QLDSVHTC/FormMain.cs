@@ -95,17 +95,17 @@ namespace QLDSVHTC
             }
         }
 
-       /* private void MonHocButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmMonHoc));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmMonHoc f = new frmMonHoc();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }*/
+        /* private void MonHocButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+         {
+             Form frm = this.CheckExists(typeof(frmMonHoc));
+             if (frm != null) frm.Activate();
+             else
+             {
+                 frmMonHoc f = new frmMonHoc();
+                 f.MdiParent = this;
+                 f.Show();
+             }
+         }*/
 
         /*private void LopTinChibarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -119,95 +119,95 @@ namespace QLDSVHTC
             }
         }*/
 
-       /* private void DangKibarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmDangKi));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmDangKi f = new frmDangKi();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }*/
+        /* private void DangKibarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+         {
+             Form frm = this.CheckExists(typeof(frmDangKi));
+             if (frm != null) frm.Activate();
+             else
+             {
+                 frmDangKi f = new frmDangKi();
+                 f.MdiParent = this;
+                 f.Show();
+             }
+         }*/
 
-       /* private void DiemButtonItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnDIEM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(frmDiem));
+            Form frm = this.CheckExists(typeof(FormDiem));
             if (frm != null) frm.Activate();
             else
             {
-                frmDiem f = new frmDiem();
+                FormDiem f = new FormDiem();
                 f.MdiParent = this;
                 f.Show();
             }
         }
-*/
-      /*  private void btnTaoTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmTaoTaiKhoan f = new frmTaoTaiKhoan();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
-*/
-       /* private void ribbonControl1_Click(object sender, EventArgs e)
-        {
 
-        }
+        /*  private void btnTaoTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+          {
+              Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
+              if (frm != null) frm.Activate();
+              else
+              {
+                  frmTaoTaiKhoan f = new frmTaoTaiKhoan();
+                  f.MdiParent = this;
+                  f.Show();
+              }
+          }
+  */
+        /* private void ribbonControl1_Click(object sender, EventArgs e)
+         {
 
-        private void HocPhibarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
+         }
 
-            Form frm = this.CheckExists(typeof(frmHocPhi));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frmHocPhi f = new frmHocPhi();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }*/
+         private void HocPhibarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+         {
 
-      /*  private void btnLapPhieuNX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frptInDSSVLTC));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frptInDSSVLTC f = new frptInDSSVLTC();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
-*/
-       /* private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frptDSLTC));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frptDSLTC f = new frptDSLTC();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }*/
+             Form frm = this.CheckExists(typeof(frmHocPhi));
+             if (frm != null) frm.Activate();
+             else
+             {
+                 frmHocPhi f = new frmHocPhi();
+                 f.MdiParent = this;
+                 f.Show();
+             }
+         }*/
 
-      /*  private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frptBDHM));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frptBDHM f = new frptBDHM();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }*/
+        /*  private void btnLapPhieuNX_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+          {
+              Form frm = this.CheckExists(typeof(frptInDSSVLTC));
+              if (frm != null) frm.Activate();
+              else
+              {
+                  frptInDSSVLTC f = new frptInDSSVLTC();
+                  f.MdiParent = this;
+                  f.Show();
+              }
+          }
+  */
+        /* private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+         {
+             Form frm = this.CheckExists(typeof(frptDSLTC));
+             if (frm != null) frm.Activate();
+             else
+             {
+                 frptDSLTC f = new frptDSLTC();
+                 f.MdiParent = this;
+                 f.Show();
+             }
+         }*/
+
+        /*  private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+          {
+              Form frm = this.CheckExists(typeof(frptBDHM));
+              if (frm != null) frm.Activate();
+              else
+              {
+                  frptBDHM f = new frptBDHM();
+                  f.MdiParent = this;
+                  f.Show();
+              }
+          }*/
 
         /*private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -221,18 +221,18 @@ namespace QLDSVHTC
             }
         }
 */
-      /*  private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(frptHocPhi));
-            if (frm != null) frm.Activate();
-            else
-            {
-                frptHocPhi f = new frptHocPhi();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
-*/
+        /*  private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+          {
+              Form frm = this.CheckExists(typeof(frptHocPhi));
+              if (frm != null) frm.Activate();
+              else
+              {
+                  frptHocPhi f = new frptHocPhi();
+                  f.MdiParent = this;
+                  f.Show();
+              }
+          }
+  */
         private void btnLogout_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
@@ -243,6 +243,19 @@ namespace QLDSVHTC
             Form frmDangNhap = new FormDN();
 
             this.Close();
+        }
+
+        private void btnDIEM_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormDiem));
+            if (frm != null) frm.Activate();
+            else
+            {
+                 FormDiem f = new FormDiem();
+                 f.MdiParent = this;
+                 f.Show();
+            }
+        
         }
 
 

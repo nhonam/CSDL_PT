@@ -26,3 +26,4 @@ C:\Users\lhhoa\source\repos\QLDSVHTC\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.pdb
 C:\Users\lhhoa\source\repos\QLDSVHTC\CSDL_PT\QLDSVHTC\bin\Debug\QLDSVHTC.exe.config
 C:\Users\lhhoa\source\repos\QLDSVHTC\CSDL_PT\QLDSVHTC\bin\Debug\QLDSVHTC.exe
 C:\Users\lhhoa\source\repos\QLDSVHTC\CSDL_PT\QLDSVHTC\bin\Debug\QLDSVHTC.pdb
+C:\Users\lhhoa\source\repos\QLDSVHTC\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FormDiem.resources

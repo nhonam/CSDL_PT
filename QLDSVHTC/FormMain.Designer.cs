@@ -38,6 +38,7 @@ namespace QLDSVHTC
             this.BTNTTK = new DevExpress.XtraBars.BarButtonItem();
             this.BTNTHOAT = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDIEM = new DevExpress.XtraBars.BarButtonItem();
             this.rpNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -51,6 +52,8 @@ namespace QLDSVHTC
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.NHOM = new System.Windows.Forms.ToolStripStatusLabel();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.DiemButtonItem = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -67,9 +70,11 @@ namespace QLDSVHTC
             this.btnDangNhap,
             this.BTNTTK,
             this.BTNTHOAT,
-            this.btnLogout});
+            this.btnLogout,
+            this.btnDIEM});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.MaxItemId = 8;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpNHAPXUAT,
@@ -135,6 +140,15 @@ namespace QLDSVHTC
             this.btnLogout.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnLogout.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLogout_ItemClick);
             // 
+            // btnDIEM
+            // 
+            this.btnDIEM.Caption = "DIEM";
+            this.btnDIEM.Id = 7;
+            this.btnDIEM.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDIEM.ImageOptions.Image")));
+            this.btnDIEM.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDIEM.ImageOptions.LargeImage")));
+            this.btnDIEM.Name = "btnDIEM";
+            this.btnDIEM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDIEM_ItemClick_1);
+            // 
             // rpNHAPXUAT
             // 
             this.rpNHAPXUAT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -146,6 +160,7 @@ namespace QLDSVHTC
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnSINHVIEN);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnLOPHOC);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDIEM);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "QUAN LY";
             // 
@@ -180,6 +195,7 @@ namespace QLDSVHTC
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 690);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1213, 33);
@@ -226,6 +242,14 @@ namespace QLDSVHTC
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "QUAN LY";
             // 
+            // DiemButtonItem
+            // 
+            this.DiemButtonItem.Name = "DiemButtonItem";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -269,6 +293,9 @@ namespace QLDSVHTC
         public System.Windows.Forms.ToolStripStatusLabel MAGV;
         public System.Windows.Forms.ToolStripStatusLabel HOTEN;
         public System.Windows.Forms.ToolStripStatusLabel NHOM;
+        private DevExpress.XtraBars.BarButtonItem btnDIEM;
+        private DevExpress.XtraBars.BarButtonItem DiemButtonItem;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
 

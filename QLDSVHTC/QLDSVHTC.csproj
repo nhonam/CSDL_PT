@@ -91,6 +91,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_SV1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form\FormDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDiem.Designer.cs">
+      <DependentUpon>FormDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormDN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\FormDiem.resx">
+      <DependentUpon>FormDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

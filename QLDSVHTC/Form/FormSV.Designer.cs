@@ -117,7 +117,8 @@ namespace QLDSVHTC
             // mASVLabel
             // 
             mASVLabel.AutoSize = true;
-            mASVLabel.Location = new System.Drawing.Point(22, 24);
+            mASVLabel.Location = new System.Drawing.Point(28, 30);
+            mASVLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             mASVLabel.Name = "mASVLabel";
             mASVLabel.Size = new System.Drawing.Size(47, 17);
             mASVLabel.TabIndex = 0;
@@ -126,7 +127,8 @@ namespace QLDSVHTC
             // hOLabel
             // 
             hOLabel.AutoSize = true;
-            hOLabel.Location = new System.Drawing.Point(36, 68);
+            hOLabel.Location = new System.Drawing.Point(45, 85);
+            hOLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             hOLabel.Name = "hOLabel";
             hOLabel.Size = new System.Drawing.Size(32, 17);
             hOLabel.TabIndex = 2;
@@ -135,7 +137,8 @@ namespace QLDSVHTC
             // tENLabel
             // 
             tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(53, 106);
+            tENLabel.Location = new System.Drawing.Point(66, 132);
+            tENLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             tENLabel.Name = "tENLabel";
             tENLabel.Size = new System.Drawing.Size(38, 17);
             tENLabel.TabIndex = 4;
@@ -144,7 +147,8 @@ namespace QLDSVHTC
             // pHAILabel
             // 
             pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(66, 138);
+            pHAILabel.Location = new System.Drawing.Point(82, 172);
+            pHAILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             pHAILabel.Name = "pHAILabel";
             pHAILabel.Size = new System.Drawing.Size(42, 17);
             pHAILabel.TabIndex = 6;
@@ -153,7 +157,8 @@ namespace QLDSVHTC
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(77, 177);
+            dIACHILabel.Location = new System.Drawing.Point(96, 221);
+            dIACHILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(57, 17);
             dIACHILabel.TabIndex = 8;
@@ -162,7 +167,8 @@ namespace QLDSVHTC
             // mALOPLabel
             // 
             mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(275, 79);
+            mALOPLabel.Location = new System.Drawing.Point(344, 99);
+            mALOPLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             mALOPLabel.Name = "mALOPLabel";
             mALOPLabel.Size = new System.Drawing.Size(56, 17);
             mALOPLabel.TabIndex = 12;
@@ -171,7 +177,8 @@ namespace QLDSVHTC
             // dANGHIHOCLabel
             // 
             dANGHIHOCLabel.AutoSize = true;
-            dANGHIHOCLabel.Location = new System.Drawing.Point(275, 129);
+            dANGHIHOCLabel.Location = new System.Drawing.Point(344, 161);
+            dANGHIHOCLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             dANGHIHOCLabel.Name = "dANGHIHOCLabel";
             dANGHIHOCLabel.Size = new System.Drawing.Size(90, 17);
             dANGHIHOCLabel.TabIndex = 14;
@@ -180,7 +187,8 @@ namespace QLDSVHTC
             // nGAYSINHLabel1
             // 
             nGAYSINHLabel1.AutoSize = true;
-            nGAYSINHLabel1.Location = new System.Drawing.Point(275, 39);
+            nGAYSINHLabel1.Location = new System.Drawing.Point(344, 49);
+            nGAYSINHLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nGAYSINHLabel1.Name = "nGAYSINHLabel1";
             nGAYSINHLabel1.Size = new System.Drawing.Size(77, 17);
             nGAYSINHLabel1.TabIndex = 15;
@@ -352,18 +360,18 @@ namespace QLDSVHTC
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(12);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1253, 85);
+            this.panelControl1.Size = new System.Drawing.Size(1253, 106);
             this.panelControl1.TabIndex = 4;
             // 
             // cmbKhoa
             // 
             this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(233, 25);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(12);
+            this.cmbKhoa.Location = new System.Drawing.Point(291, 31);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(389, 24);
+            this.cmbKhoa.Size = new System.Drawing.Size(485, 24);
             this.cmbKhoa.TabIndex = 7;
             this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
@@ -371,8 +379,8 @@ namespace QLDSVHTC
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(67, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
+            this.label1.Location = new System.Drawing.Point(84, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 6;
@@ -382,13 +390,13 @@ namespace QLDSVHTC
             // 
             this.gridControl1.DataSource = this.bdsLOP;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(12);
-            this.gridControl1.Location = new System.Drawing.Point(0, 115);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.gridControl1.Location = new System.Drawing.Point(0, 136);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(12);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1253, 277);
+            this.gridControl1.Size = new System.Drawing.Size(1253, 346);
             this.gridControl1.TabIndex = 9;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -410,45 +418,45 @@ namespace QLDSVHTC
             this.colTENLOP,
             this.colKHOAHOC,
             this.colMAKHOA});
-            this.gridView1.DetailHeight = 1330;
+            this.gridView1.DetailHeight = 1662;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
             // colMALOP1
             // 
             this.colMALOP1.FieldName = "MALOP";
-            this.colMALOP1.MinWidth = 25;
+            this.colMALOP1.MinWidth = 31;
             this.colMALOP1.Name = "colMALOP1";
             this.colMALOP1.Visible = true;
             this.colMALOP1.VisibleIndex = 0;
-            this.colMALOP1.Width = 93;
+            this.colMALOP1.Width = 116;
             // 
             // colTENLOP
             // 
             this.colTENLOP.FieldName = "TENLOP";
-            this.colTENLOP.MinWidth = 25;
+            this.colTENLOP.MinWidth = 31;
             this.colTENLOP.Name = "colTENLOP";
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
-            this.colTENLOP.Width = 93;
+            this.colTENLOP.Width = 116;
             // 
             // colKHOAHOC
             // 
             this.colKHOAHOC.FieldName = "KHOAHOC";
-            this.colKHOAHOC.MinWidth = 25;
+            this.colKHOAHOC.MinWidth = 31;
             this.colKHOAHOC.Name = "colKHOAHOC";
             this.colKHOAHOC.Visible = true;
             this.colKHOAHOC.VisibleIndex = 2;
-            this.colKHOAHOC.Width = 93;
+            this.colKHOAHOC.Width = 116;
             // 
             // colMAKHOA
             // 
             this.colMAKHOA.FieldName = "MAKHOA";
-            this.colMAKHOA.MinWidth = 25;
+            this.colMAKHOA.MinWidth = 31;
             this.colMAKHOA.Name = "colMAKHOA";
             this.colMAKHOA.Visible = true;
             this.colMAKHOA.VisibleIndex = 3;
-            this.colMAKHOA.Width = 93;
+            this.colMAKHOA.Width = 116;
             // 
             // LOPTableAdapter
             // 
@@ -458,13 +466,13 @@ namespace QLDSVHTC
             // 
             this.sINHVIENGridControl.DataSource = this.bdsSV;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sINHVIENGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(12);
-            this.sINHVIENGridControl.Location = new System.Drawing.Point(233, 392);
+            this.sINHVIENGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.sINHVIENGridControl.Location = new System.Drawing.Point(-22, 482);
             this.sINHVIENGridControl.MainView = this.gridView2;
-            this.sINHVIENGridControl.Margin = new System.Windows.Forms.Padding(12);
+            this.sINHVIENGridControl.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
             this.sINHVIENGridControl.MenuManager = this.barManager1;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
-            this.sINHVIENGridControl.Size = new System.Drawing.Size(1020, 217);
+            this.sINHVIENGridControl.Size = new System.Drawing.Size(1275, 127);
             this.sINHVIENGridControl.TabIndex = 11;
             this.sINHVIENGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -486,90 +494,90 @@ namespace QLDSVHTC
             this.colMALOP,
             this.colDANGHIHOC,
             this.colPASSWORD});
-            this.gridView2.DetailHeight = 1330;
+            this.gridView2.DetailHeight = 1662;
             this.gridView2.GridControl = this.sINHVIENGridControl;
             this.gridView2.Name = "gridView2";
             // 
             // colMASV
             // 
             this.colMASV.FieldName = "MASV";
-            this.colMASV.MinWidth = 25;
+            this.colMASV.MinWidth = 31;
             this.colMASV.Name = "colMASV";
             this.colMASV.Visible = true;
             this.colMASV.VisibleIndex = 0;
-            this.colMASV.Width = 94;
+            this.colMASV.Width = 117;
             // 
             // colHO
             // 
             this.colHO.FieldName = "HO";
-            this.colHO.MinWidth = 25;
+            this.colHO.MinWidth = 31;
             this.colHO.Name = "colHO";
             this.colHO.Visible = true;
             this.colHO.VisibleIndex = 1;
-            this.colHO.Width = 94;
+            this.colHO.Width = 117;
             // 
             // colTEN
             // 
             this.colTEN.FieldName = "TEN";
-            this.colTEN.MinWidth = 25;
+            this.colTEN.MinWidth = 31;
             this.colTEN.Name = "colTEN";
             this.colTEN.Visible = true;
             this.colTEN.VisibleIndex = 2;
-            this.colTEN.Width = 94;
+            this.colTEN.Width = 117;
             // 
             // colPHAI
             // 
             this.colPHAI.FieldName = "PHAI";
-            this.colPHAI.MinWidth = 25;
+            this.colPHAI.MinWidth = 31;
             this.colPHAI.Name = "colPHAI";
             this.colPHAI.Visible = true;
             this.colPHAI.VisibleIndex = 3;
-            this.colPHAI.Width = 94;
+            this.colPHAI.Width = 117;
             // 
             // colDIACHI
             // 
             this.colDIACHI.FieldName = "DIACHI";
-            this.colDIACHI.MinWidth = 25;
+            this.colDIACHI.MinWidth = 31;
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
             this.colDIACHI.VisibleIndex = 4;
-            this.colDIACHI.Width = 94;
+            this.colDIACHI.Width = 117;
             // 
             // colNGAYSINH
             // 
             this.colNGAYSINH.FieldName = "NGAYSINH";
-            this.colNGAYSINH.MinWidth = 25;
+            this.colNGAYSINH.MinWidth = 31;
             this.colNGAYSINH.Name = "colNGAYSINH";
             this.colNGAYSINH.Visible = true;
             this.colNGAYSINH.VisibleIndex = 5;
-            this.colNGAYSINH.Width = 94;
+            this.colNGAYSINH.Width = 117;
             // 
             // colMALOP
             // 
             this.colMALOP.FieldName = "MALOP";
-            this.colMALOP.MinWidth = 25;
+            this.colMALOP.MinWidth = 31;
             this.colMALOP.Name = "colMALOP";
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 6;
-            this.colMALOP.Width = 94;
+            this.colMALOP.Width = 117;
             // 
             // colDANGHIHOC
             // 
             this.colDANGHIHOC.FieldName = "DANGHIHOC";
-            this.colDANGHIHOC.MinWidth = 25;
+            this.colDANGHIHOC.MinWidth = 31;
             this.colDANGHIHOC.Name = "colDANGHIHOC";
             this.colDANGHIHOC.Visible = true;
             this.colDANGHIHOC.VisibleIndex = 7;
-            this.colDANGHIHOC.Width = 94;
+            this.colDANGHIHOC.Width = 117;
             // 
             // colPASSWORD
             // 
             this.colPASSWORD.FieldName = "PASSWORD";
-            this.colPASSWORD.MinWidth = 25;
+            this.colPASSWORD.MinWidth = 31;
             this.colPASSWORD.Name = "colPASSWORD";
             this.colPASSWORD.Visible = true;
             this.colPASSWORD.VisibleIndex = 8;
-            this.colPASSWORD.Width = 94;
+            this.colPASSWORD.Width = 117;
             // 
             // SINHVIENTableAdapter
             // 
@@ -615,75 +623,84 @@ namespace QLDSVHTC
             this.panelControl2.Controls.Add(mASVLabel);
             this.panelControl2.Controls.Add(this.txbMaSV);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl2.Location = new System.Drawing.Point(0, 392);
+            this.panelControl2.Location = new System.Drawing.Point(0, 482);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(658, 217);
+            this.panelControl2.Size = new System.Drawing.Size(822, 127);
             this.panelControl2.TabIndex = 21;
             // 
             // txbNgaySinh
             // 
             this.txbNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsSV, "NGAYSINH", true));
-            this.txbNgaySinh.Location = new System.Drawing.Point(375, 34);
+            this.txbNgaySinh.Location = new System.Drawing.Point(469, 42);
+            this.txbNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbNgaySinh.Name = "txbNgaySinh";
-            this.txbNgaySinh.Size = new System.Drawing.Size(200, 23);
+            this.txbNgaySinh.Size = new System.Drawing.Size(249, 23);
             this.txbNgaySinh.TabIndex = 16;
             // 
             // DANGHIHOCCheckEdit
             // 
             this.DANGHIHOCCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsSV, "DANGHIHOC", true));
-            this.DANGHIHOCCheckEdit.Location = new System.Drawing.Point(390, 126);
+            this.DANGHIHOCCheckEdit.Location = new System.Drawing.Point(488, 158);
+            this.DANGHIHOCCheckEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DANGHIHOCCheckEdit.Name = "DANGHIHOCCheckEdit";
-            this.DANGHIHOCCheckEdit.Size = new System.Drawing.Size(104, 24);
+            this.DANGHIHOCCheckEdit.Size = new System.Drawing.Size(130, 30);
             this.DANGHIHOCCheckEdit.TabIndex = 15;
             this.DANGHIHOCCheckEdit.UseVisualStyleBackColor = true;
             // 
             // txbMaLop
             // 
             this.txbMaLop.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "MALOP", true));
-            this.txbMaLop.Location = new System.Drawing.Point(337, 76);
+            this.txbMaLop.Location = new System.Drawing.Point(421, 95);
+            this.txbMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbMaLop.Name = "txbMaLop";
-            this.txbMaLop.Size = new System.Drawing.Size(100, 23);
+            this.txbMaLop.Size = new System.Drawing.Size(124, 23);
             this.txbMaLop.TabIndex = 13;
             // 
             // txbDiaChi
             // 
             this.txbDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "DIACHI", true));
-            this.txbDiaChi.Location = new System.Drawing.Point(140, 174);
+            this.txbDiaChi.Location = new System.Drawing.Point(175, 218);
+            this.txbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDiaChi.Name = "txbDiaChi";
-            this.txbDiaChi.Size = new System.Drawing.Size(100, 23);
+            this.txbDiaChi.Size = new System.Drawing.Size(124, 23);
             this.txbDiaChi.TabIndex = 9;
             // 
             // PHAICheckEdit
             // 
             this.PHAICheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsSV, "PHAI", true));
-            this.PHAICheckEdit.Location = new System.Drawing.Point(114, 133);
+            this.PHAICheckEdit.Location = new System.Drawing.Point(142, 166);
+            this.PHAICheckEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PHAICheckEdit.Name = "PHAICheckEdit";
-            this.PHAICheckEdit.Size = new System.Drawing.Size(104, 24);
+            this.PHAICheckEdit.Size = new System.Drawing.Size(130, 30);
             this.PHAICheckEdit.TabIndex = 7;
             this.PHAICheckEdit.UseVisualStyleBackColor = true;
             // 
             // txbTen
             // 
             this.txbTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "TEN", true));
-            this.txbTen.Location = new System.Drawing.Point(97, 103);
+            this.txbTen.Location = new System.Drawing.Point(121, 129);
+            this.txbTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbTen.Name = "txbTen";
-            this.txbTen.Size = new System.Drawing.Size(100, 23);
+            this.txbTen.Size = new System.Drawing.Size(124, 23);
             this.txbTen.TabIndex = 5;
             // 
             // txbHo
             // 
             this.txbHo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "HO", true));
-            this.txbHo.Location = new System.Drawing.Point(74, 65);
+            this.txbHo.Location = new System.Drawing.Point(92, 81);
+            this.txbHo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbHo.Name = "txbHo";
-            this.txbHo.Size = new System.Drawing.Size(100, 23);
+            this.txbHo.Size = new System.Drawing.Size(124, 23);
             this.txbHo.TabIndex = 3;
             // 
             // txbMaSV
             // 
             this.txbMaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "MASV", true));
-            this.txbMaSV.Location = new System.Drawing.Point(75, 21);
+            this.txbMaSV.Location = new System.Drawing.Point(94, 26);
+            this.txbMaSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbMaSV.Name = "txbMaSV";
-            this.txbMaSV.Size = new System.Drawing.Size(100, 23);
+            this.txbMaSV.Size = new System.Drawing.Size(124, 23);
             this.txbMaSV.TabIndex = 1;
             // 
             // FormSV
@@ -701,7 +718,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSV";
-            this.Text = "8";
+            this.Text = "SINH VIEN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
