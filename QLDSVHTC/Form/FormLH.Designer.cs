@@ -53,7 +53,7 @@ namespace QLDSVHTC
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.LopGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
             this.dS_SV1 = new QLDSVHTC.DS_SV1();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -77,7 +77,7 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -168,6 +168,7 @@ namespace QLDSVHTC
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
             this.btnThem.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnXoa
             // 
@@ -177,6 +178,7 @@ namespace QLDSVHTC
             this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
             // btnSua
             // 
@@ -186,6 +188,7 @@ namespace QLDSVHTC
             this.btnSua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.LargeImage")));
             this.btnSua.Name = "btnSua";
             this.btnSua.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
             // 
             // btnPhucHoi
             // 
@@ -195,6 +198,7 @@ namespace QLDSVHTC
             this.btnPhucHoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.ImageOptions.LargeImage")));
             this.btnPhucHoi.Name = "btnPhucHoi";
             this.btnPhucHoi.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick_1);
             // 
             // btnGhi
             // 
@@ -204,6 +208,7 @@ namespace QLDSVHTC
             this.btnGhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.LargeImage")));
             this.btnGhi.Name = "btnGhi";
             this.btnGhi.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGhi_ItemClick);
             // 
             // btnHuy
             // 
@@ -213,6 +218,7 @@ namespace QLDSVHTC
             this.btnHuy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.LargeImage")));
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -222,6 +228,7 @@ namespace QLDSVHTC
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick_1);
             // 
             // btnThoat
             // 
@@ -231,6 +238,7 @@ namespace QLDSVHTC
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -293,6 +301,7 @@ namespace QLDSVHTC
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(389, 24);
             this.cmbKhoa.TabIndex = 7;
+            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged_1);
             // 
             // label1
             // 
@@ -305,19 +314,19 @@ namespace QLDSVHTC
             this.label1.TabIndex = 6;
             this.label1.Text = "KHOA : ";
             // 
-            // gridControl1
+            // LopGridControl
             // 
-            this.gridControl1.DataSource = this.bdsLOP;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(12);
-            this.gridControl1.Location = new System.Drawing.Point(0, 115);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(12);
-            this.gridControl1.MenuManager = this.barManager1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1018, 277);
-            this.gridControl1.TabIndex = 10;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.LopGridControl.DataSource = this.bdsLOP;
+            this.LopGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LopGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(12);
+            this.LopGridControl.Location = new System.Drawing.Point(0, 115);
+            this.LopGridControl.MainView = this.gridView1;
+            this.LopGridControl.Margin = new System.Windows.Forms.Padding(12);
+            this.LopGridControl.MenuManager = this.barManager1;
+            this.LopGridControl.Name = "LopGridControl";
+            this.LopGridControl.Size = new System.Drawing.Size(1018, 277);
+            this.LopGridControl.TabIndex = 10;
+            this.LopGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // bdsLOP
@@ -338,7 +347,7 @@ namespace QLDSVHTC
             this.colKHOAHOC,
             this.colMAKHOA});
             this.gridView1.DetailHeight = 1330;
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.LopGridControl;
             this.gridView1.Name = "gridView1";
             // 
             // colMALOP1
@@ -424,6 +433,7 @@ namespace QLDSVHTC
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(191, 23);
             this.txbMaLop.TabIndex = 1;
+         
             // 
             // LOPTableAdapter
             // 
@@ -456,7 +466,7 @@ namespace QLDSVHTC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 611);
             this.Controls.Add(this.panelControl2);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.LopGridControl);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
@@ -469,7 +479,7 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LopGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -503,7 +513,7 @@ namespace QLDSVHTC
         private System.Windows.Forms.ComboBox cmbKhoa;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl LopGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP1;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;

@@ -198,7 +198,7 @@ namespace QLDSVHTC
                 this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
 
 
-                macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
+           /*     macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();*/
             }
         }
 

@@ -16,7 +16,7 @@ namespace QLDSVHTC
         /// </summary>
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
-        public static String connstr_publicsher = "Data Source=MSI\\SEVER1;Initial Catalog=QLDSV_HTC;Integrated Security=True";
+        public static String connstr_publicsher = "Data Source=DINHNHONAM\\SERVER1;Initial Catalog=QLDSV_HTC;Integrated Security=True";
         public static SqlDataReader myReader;
         public static String severname = "";
         public static String username = "";
@@ -25,7 +25,7 @@ namespace QLDSVHTC
 
         public static String database = "QLDSV_HTC";
         public static String remotelogin = "HTKN";
-        public static String remotepassword = "123456";
+        public static String remotepassword = "123";
         public static String mloginDN = "";
         public static String passwordDN = "";
         public static String mGroup = "";

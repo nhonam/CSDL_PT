@@ -360,7 +360,7 @@ namespace QLDSVHTC
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 30);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(15);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1253, 106);
             this.panelControl1.TabIndex = 4;
@@ -369,7 +369,7 @@ namespace QLDSVHTC
             // 
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Location = new System.Drawing.Point(291, 31);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(15);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(485, 24);
             this.cmbKhoa.TabIndex = 7;
@@ -390,10 +390,10 @@ namespace QLDSVHTC
             // 
             this.gridControl1.DataSource = this.bdsLOP;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15);
             this.gridControl1.Location = new System.Drawing.Point(0, 136);
             this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(15);
             this.gridControl1.MenuManager = this.barManager1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1253, 346);
@@ -454,8 +454,6 @@ namespace QLDSVHTC
             this.colMAKHOA.FieldName = "MAKHOA";
             this.colMAKHOA.MinWidth = 31;
             this.colMAKHOA.Name = "colMAKHOA";
-            this.colMAKHOA.Visible = true;
-            this.colMAKHOA.VisibleIndex = 3;
             this.colMAKHOA.Width = 116;
             // 
             // LOPTableAdapter
@@ -466,10 +464,10 @@ namespace QLDSVHTC
             // 
             this.sINHVIENGridControl.DataSource = this.bdsSV;
             this.sINHVIENGridControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sINHVIENGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.sINHVIENGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15);
             this.sINHVIENGridControl.Location = new System.Drawing.Point(-22, 482);
             this.sINHVIENGridControl.MainView = this.gridView2;
-            this.sINHVIENGridControl.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.sINHVIENGridControl.Margin = new System.Windows.Forms.Padding(15);
             this.sINHVIENGridControl.MenuManager = this.barManager1;
             this.sINHVIENGridControl.Name = "sINHVIENGridControl";
             this.sINHVIENGridControl.Size = new System.Drawing.Size(1275, 127);
@@ -624,7 +622,7 @@ namespace QLDSVHTC
             this.panelControl2.Controls.Add(this.txbMaSV);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl2.Location = new System.Drawing.Point(0, 482);
-            this.panelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(822, 127);
             this.panelControl2.TabIndex = 21;
@@ -633,7 +631,7 @@ namespace QLDSVHTC
             // 
             this.txbNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsSV, "NGAYSINH", true));
             this.txbNgaySinh.Location = new System.Drawing.Point(469, 42);
-            this.txbNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.txbNgaySinh.Name = "txbNgaySinh";
             this.txbNgaySinh.Size = new System.Drawing.Size(249, 23);
             this.txbNgaySinh.TabIndex = 16;
@@ -642,7 +640,7 @@ namespace QLDSVHTC
             // 
             this.DANGHIHOCCheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsSV, "DANGHIHOC", true));
             this.DANGHIHOCCheckEdit.Location = new System.Drawing.Point(488, 158);
-            this.DANGHIHOCCheckEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DANGHIHOCCheckEdit.Margin = new System.Windows.Forms.Padding(4);
             this.DANGHIHOCCheckEdit.Name = "DANGHIHOCCheckEdit";
             this.DANGHIHOCCheckEdit.Size = new System.Drawing.Size(130, 30);
             this.DANGHIHOCCheckEdit.TabIndex = 15;
@@ -652,7 +650,7 @@ namespace QLDSVHTC
             // 
             this.txbMaLop.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "MALOP", true));
             this.txbMaLop.Location = new System.Drawing.Point(421, 95);
-            this.txbMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(124, 23);
             this.txbMaLop.TabIndex = 13;
@@ -661,7 +659,7 @@ namespace QLDSVHTC
             // 
             this.txbDiaChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "DIACHI", true));
             this.txbDiaChi.Location = new System.Drawing.Point(175, 218);
-            this.txbDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txbDiaChi.Name = "txbDiaChi";
             this.txbDiaChi.Size = new System.Drawing.Size(124, 23);
             this.txbDiaChi.TabIndex = 9;
@@ -670,7 +668,7 @@ namespace QLDSVHTC
             // 
             this.PHAICheckEdit.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsSV, "PHAI", true));
             this.PHAICheckEdit.Location = new System.Drawing.Point(142, 166);
-            this.PHAICheckEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PHAICheckEdit.Margin = new System.Windows.Forms.Padding(4);
             this.PHAICheckEdit.Name = "PHAICheckEdit";
             this.PHAICheckEdit.Size = new System.Drawing.Size(130, 30);
             this.PHAICheckEdit.TabIndex = 7;
@@ -680,7 +678,7 @@ namespace QLDSVHTC
             // 
             this.txbTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "TEN", true));
             this.txbTen.Location = new System.Drawing.Point(121, 129);
-            this.txbTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbTen.Margin = new System.Windows.Forms.Padding(4);
             this.txbTen.Name = "txbTen";
             this.txbTen.Size = new System.Drawing.Size(124, 23);
             this.txbTen.TabIndex = 5;
@@ -689,7 +687,7 @@ namespace QLDSVHTC
             // 
             this.txbHo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "HO", true));
             this.txbHo.Location = new System.Drawing.Point(92, 81);
-            this.txbHo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbHo.Margin = new System.Windows.Forms.Padding(4);
             this.txbHo.Name = "txbHo";
             this.txbHo.Size = new System.Drawing.Size(124, 23);
             this.txbHo.TabIndex = 3;
@@ -698,7 +696,7 @@ namespace QLDSVHTC
             // 
             this.txbMaSV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsSV, "MASV", true));
             this.txbMaSV.Location = new System.Drawing.Point(94, 26);
-            this.txbMaSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbMaSV.Margin = new System.Windows.Forms.Padding(4);
             this.txbMaSV.Name = "txbMaSV";
             this.txbMaSV.Size = new System.Drawing.Size(124, 23);
             this.txbMaSV.TabIndex = 1;
