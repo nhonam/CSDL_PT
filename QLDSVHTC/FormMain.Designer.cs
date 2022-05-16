@@ -39,6 +39,8 @@ namespace QLDSVHTC
             this.BTNTHOAT = new DevExpress.XtraBars.BarButtonItem();
             this.btnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.btnDIEM = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDangKi = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.rpNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -71,10 +73,12 @@ namespace QLDSVHTC
             this.BTNTTK,
             this.BTNTHOAT,
             this.btnLogout,
-            this.btnDIEM});
+            this.btnDIEM,
+            this.btnDangKi,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl1.MaxItemId = 8;
+            this.ribbonControl1.MaxItemId = 10;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpNHAPXUAT,
@@ -149,6 +153,19 @@ namespace QLDSVHTC
             this.btnDIEM.Name = "btnDIEM";
             this.btnDIEM.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDIEM_ItemClick_1);
             // 
+            // btnDangKi
+            // 
+            this.btnDangKi.Caption = "DANGKI";
+            this.btnDangKi.Id = 8;
+            this.btnDangKi.Name = "btnDangKi";
+            this.btnDangKi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "barButtonItem3";
+            this.barButtonItem3.Id = 9;
+            this.barButtonItem3.Name = "barButtonItem3";
+            // 
             // rpNHAPXUAT
             // 
             this.rpNHAPXUAT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -161,6 +178,7 @@ namespace QLDSVHTC
             this.ribbonPageGroup3.ItemLinks.Add(this.btnSINHVIEN);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnLOPHOC);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnDIEM);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnDangKi);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "QUAN LY";
             // 
@@ -297,6 +315,8 @@ namespace QLDSVHTC
         private DevExpress.XtraBars.BarButtonItem btnDIEM;
         private DevExpress.XtraBars.BarButtonItem DiemButtonItem;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnDangKi;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 

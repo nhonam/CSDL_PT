@@ -54,7 +54,7 @@ namespace QLDSVHTC
             if (KetNoi_CSDLGOC() == 0) return;
             LayDSPM("SELECT * FROM LINK0.QLDSV_HTC.dbo.V_DS_PHANMANH");
             txtLogin.Text = "pgv";
-            txtPass.Text = "123456";
+            txtPass.Text = "123";
             cmbKhoa.SelectedIndex = 1;
             cmbKhoa.SelectedIndex = 0;
         }
@@ -90,7 +90,7 @@ namespace QLDSVHTC
             if (isSinhVien == true)
             {
                 Program.mlogin = "HTKN";
-                Program.password = "123456";
+                Program.password = "123";
                 if (Program.KetNoi() == 0) return;
             }
             else

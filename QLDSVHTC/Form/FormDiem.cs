@@ -14,46 +14,50 @@ using System.Windows.Forms;
 
 namespace QLDSVHTC
 {
-    public partial class FormDiem : Form
+    public partial class FormDIEM : Form
     {
+
         int vitri = 0;
         string macn = "";
-        private BindingSource bdsDiem = new BindingSource();
-        public FormDiem()
+        private BindingSource bdsDiem = new BindingSource();    
+        public FormDIEM()
         {
             InitializeComponent();
         }
 
-/*        private void mONHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void mONHOCBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.bdsMH.EndEdit();
+            this.bdsMONHOC.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dS_SV1);
 
-        }*/
+        }
 
-        private void FormDiem_Load(object sender, EventArgs e)
+        private void FormDIEM_Load(object sender, EventArgs e)
         {
+
             dS_SV1.EnforceConstraints = false;
-            this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.MONHOCTableAdapter.Fill(this.dS_SV1.MONHOC);
+            this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.mONHOCTableAdapter.Fill(this.dS_SV1.MONHOC);
 
-            cmbKhoa.DataSource = Program.bds_dspm;
-            cmbKhoa.DisplayMember = "TENKHOA";
-            cmbKhoa.ValueMember = "TENSERVER";
-            cmbKhoa.SelectedIndex = Program.mChinhanh;
+            cbKhoa.DataSource = Program.bds_dspm;
+            cbKhoa.DisplayMember = "TENKHOA";
+            cbKhoa.ValueMember = "TENSERVER";
+            cbKhoa.SelectedIndex = Program.mChinhanh;
 
-            cmbMonHoc.DataSource = bdsMH;
-            cmbMonHoc.DisplayMember = "TENMH";
-            cmbMonHoc.ValueMember = "TENMH";
+            cbMonHoc.DataSource = bdsMONHOC;
+            cbMonHoc.DisplayMember = "TENMH";
+            cbMonHoc.ValueMember = "TENMH";
 
             if (Program.mGroup == "KHOA")
             {
-                cmbKhoa.Enabled = false;
+                cbKhoa.Enabled = false;
             }
             loadcbNienkhoa();
-            cmbNienKhoa.SelectedIndex = 0;
+            cbNienKhoa.SelectedIndex = 0;
+
         }
+
         void loadcbNienkhoa()
         {
             DataTable dt = new DataTable();
@@ -62,10 +66,12 @@ namespace QLDSVHTC
 
             BindingSource bdsNienKhoa = new BindingSource();
             bdsNienKhoa.DataSource = dt;
-            cmbNienKhoa.DataSource = bdsNienKhoa;
-            cmbNienKhoa.DisplayMember = "NIENKHOA";
-            cmbNienKhoa.ValueMember = "NIENKHOA";
+            cbNienKhoa.DataSource = bdsNienKhoa;
+            cbNienKhoa.DisplayMember = "NIENKHOA";
+            cbNienKhoa.ValueMember = "NIENKHOA";
+
         }
+
         void loadcbHocKi(string nienkhoa)
         {
             DataTable dt = new DataTable();
@@ -74,10 +80,11 @@ namespace QLDSVHTC
 
             BindingSource bdsHocKi = new BindingSource();
             bdsHocKi.DataSource = dt;
-            cmbHocKi.DataSource = bdsHocKi;
-            cmbHocKi.DisplayMember = "HOCKY";
-            cmbHocKi.ValueMember = "HOCKY";
+            cbHocKi.DataSource = bdsHocKi;
+            cbHocKi.DisplayMember = "HOCKY";
+            cbHocKi.ValueMember = "HOCKY";
         }
+
         void loadNhom(string nienkhoa, string hocki)
         {
             DataTable dt = new DataTable();
@@ -86,16 +93,17 @@ namespace QLDSVHTC
 
             BindingSource bdsNhom = new BindingSource();
             bdsNhom.DataSource = dt;
-            cmbNhom.DataSource = bdsNhom;
-            cmbNhom.DisplayMember = "NHOM";
-            cmbNhom.ValueMember = "NHOM";
+            cbNhom.DataSource = bdsNhom;
+            cbNhom.DisplayMember = "NHOM";
+            cbNhom.ValueMember = "NHOM";
         }
-        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
+            if (cbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
-            Program.severname = cmbKhoa.SelectedValue.ToString();
-            if (cmbKhoa.SelectedIndex != Program.mChinhanh)
+            Program.severname = cbKhoa.SelectedValue.ToString();
+            if (cbKhoa.SelectedIndex != Program.mChinhanh)
             {
                 Program.mlogin = Program.remotelogin;
                 Program.password = Program.remotepassword;
@@ -112,16 +120,20 @@ namespace QLDSVHTC
             else
             {
                 loadcbNienkhoa();
-                cmbNienKhoa.SelectedIndex = 0;
+                cbNienKhoa.SelectedIndex = 0;
+                this.mONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.mONHOCTableAdapter.Fill(this.dS_SV1.MONHOC);
             }
         }
+
         void loadBDMH()
         {
-            string cmd = "EXEC [dbo].[SP_BDMH] '" + cmbNienKhoa.Text + "', " + cmbHocKi.Text + ", " + cmbNhom.Text + ", N'" + cmbMonHoc.SelectedValue.ToString() + "'";
+            string cmd = "EXEC [dbo].[SP_BDMH] '" + cbNienKhoa.Text + "', " + cbHocKi.Text + ", " + cbNhom.Text + ", N'" + cbMonHoc.SelectedValue.ToString() + "'";
             DataTable diemTable = Program.ExecSqlDataTable(cmd);
             this.bdsDiem.DataSource = diemTable;
-            this.DiemGridControl.DataSource = this.bdsDiem;
+            this.sP_BDMHGridControl.DataSource = this.bdsDiem;
         }
+
         private void btnBatDau_Click(object sender, EventArgs e)
         {
             loadBDMH();
@@ -129,7 +141,7 @@ namespace QLDSVHTC
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            BindingSource bdsTemp = (BindingSource)this.DiemGridControl.DataSource;
+            BindingSource bdsTemp = (BindingSource)this.sP_BDMHGridControl.DataSource;
             if (bdsTemp == null)
             {
                 MessageBox.Show("Chưa có thông tin để ghi điểm!", "", MessageBoxButtons.OK);
@@ -216,35 +228,64 @@ namespace QLDSVHTC
                 conn.Close();
             }
             XtraMessageBox.Show("Thao tác thành công!", "", MessageBoxButtons.OK);
-            string cmd1 = "EXEC [dbo].[SP_BDMH] '" + cmbNienKhoa.Text + "', " + cmbHocKi.Text + ", " + cmbNhom.Text + ", N'" + cmbMonHoc.SelectedValue.ToString() + "'";
+            string cmd1 = "EXEC [dbo].[SP_BDMH] '" + cbNienKhoa.Text + "', " + cbHocKi.Text + ", " + cbNhom.Text + ", N'" + cbMonHoc.SelectedValue.ToString() + "'";
             DataTable diemTable = Program.ExecSqlDataTable(cmd1);
             this.bdsDiem.DataSource = diemTable;
-            this.DiemGridControl.DataSource = this.bdsDiem;
+            this.sP_BDMHGridControl.DataSource = this.bdsDiem;
             return;
         }
 
+        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.LawnGreen;
+            }
+        }
+
+        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            e.Handled = true;
+            SolidBrush brush = new SolidBrush(Color.FromArgb(0xC6, 0x64, 0xFF));
+            e.Graphics.FillRectangle(brush, e.Bounds);
+            e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width - 1, e.Bounds.Height));
+            Size size = ImageCollection.GetImageListSize(e.Info.ImageCollection);
+            Rectangle r = e.Bounds;
+            ImageCollection.DrawImageListImage(e.Cache, e.Info.ImageCollection, e.Info.ImageIndex,
+                    new Rectangle(r.X + (r.Width - size.Width) / 2, r.Y + (r.Height - size.Height) / 2, size.Width, size.Height));
+            brush.Dispose();
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cmbHocKi_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbHocKi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadNhom(cmbNienKhoa.Text, cmbHocKi.Text);
-            cmbNhom.SelectedIndex = 0;    
+            loadNhom(cbNienKhoa.Text, cbHocKi.Text);
+            cbNhom.SelectedIndex = 0;
+           
         }
 
-        private void cmbNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadNhom(cmbNienKhoa.Text, cmbHocKi.Text);
-            cmbNhom.SelectedIndex = 0;
+
+            loadcbHocKi(cbNienKhoa.Text);
+            cbHocKi.SelectedIndex = 0;
+          
+        }
+
+
+        private void sINHVIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sINHVIENBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dS_SV1);
 
         }
 
-        private void cmbNhom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

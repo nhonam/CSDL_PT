@@ -54,8 +54,8 @@ namespace QLDSVHTC
         {
             if (Program.mGroup.Equals("SV"))
             {
-                //DangKibarButton.Enabled = true;
-                //DiemButtonItem.Enabled = HocPhibarButton.Enabled = btnLOPHOC.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSINHVIEN.Enabled = btnTaoTK.Enabled = false;
+                btnDangKi.Enabled = true;
+               // DiemButtonItem.Enabled = HocPhibarButton.Enabled = btnLOPHOC.Enabled = LopTinChibarButton.Enabled = MonHocButtonItem.Enabled = btnSINHVIEN.Enabled = btnTaoTK.Enabled = false;
                 rpBAOCAO.Visible = false;
             }
             if (Program.mGroup.Equals("PKT"))
@@ -131,17 +131,6 @@ namespace QLDSVHTC
              }
          }*/
 
-        private void btnDIEM_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(FormDiem));
-            if (frm != null) frm.Activate();
-            else
-            {
-                FormDiem f = new FormDiem();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
 
         /*  private void btnTaoTK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
           {
@@ -247,16 +236,30 @@ namespace QLDSVHTC
 
         private void btnDIEM_ItemClick_1(object sender, ItemClickEventArgs e)
         {
-            Form frm = this.CheckExists(typeof(FormDiem));
+            Form frm = this.CheckExists(typeof(FormDIEM));
             if (frm != null) frm.Activate();
             else
             {
-                 FormDiem f = new FormDiem();
+                FormDIEM f = new FormDIEM();
                  f.MdiParent = this;
                  f.Show();
             }
         
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormDangKi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormDangKi f = new FormDangKi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+
 
 
 

@@ -1,7 +1,7 @@
 ﻿
 namespace QLDSVHTC
 {
-    partial class FormDiem
+    partial class FormDIEM
     {
         /// <summary>
         /// Required designer variable.
@@ -34,39 +34,46 @@ namespace QLDSVHTC
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbNhom = new System.Windows.Forms.ComboBox();
-            this.cmbHocKi = new System.Windows.Forms.ComboBox();
-            this.cmbNienKhoa = new System.Windows.Forms.ComboBox();
+            this.cbNhom = new System.Windows.Forms.ComboBox();
+            this.cbHocKi = new System.Windows.Forms.ComboBox();
+            this.cbNienKhoa = new System.Windows.Forms.ComboBox();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnCapNhat = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbMonHoc = new System.Windows.Forms.ComboBox();
+            this.cbMonHoc = new System.Windows.Forms.ComboBox();
             this.btnBatDau = new DevExpress.XtraEditors.SimpleButton();
-            this.cmbKhoa = new System.Windows.Forms.ComboBox();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bdsMH = new System.Windows.Forms.BindingSource(this.components);
             this.dS_SV1 = new QLDSVHTC.DS_SV1();
-            this.MONHOCTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.MONHOCTableAdapter();
-            this.DiemGridControl = new DevExpress.XtraGrid.GridControl();
+            this.sINHVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sINHVIENTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.SINHVIENTableAdapter();
+            this.tableAdapterManager = new QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager();
+            this.sP_BDMHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sP_BDMHTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.SP_BDMHTableAdapter();
+            this.sP_BDMHGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMALC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMASV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHOTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIEM_CC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIEM_GK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIEM_CK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDIEM_TK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
+            this.mONHOCTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.MONHOCTableAdapter();
             tENMHLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiemGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_BDMHBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_BDMHGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             this.SuspendLayout();
             // 
             // tENMHLabel
@@ -83,17 +90,15 @@ namespace QLDSVHTC
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1091, 81);
+            this.panelControl1.Size = new System.Drawing.Size(1257, 42);
             this.panelControl1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(448, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(481, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 32);
             this.label1.TabIndex = 0;
@@ -101,52 +106,52 @@ namespace QLDSVHTC
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cmbNhom);
-            this.panel1.Controls.Add(this.cmbHocKi);
-            this.panel1.Controls.Add(this.cmbNienKhoa);
+            this.panel1.Controls.Add(this.cbNhom);
+            this.panel1.Controls.Add(this.cbHocKi);
+            this.panel1.Controls.Add(this.cbNienKhoa);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnCapNhat);
-            this.panel1.Controls.Add(this.cmbMonHoc);
+            this.panel1.Controls.Add(this.cbMonHoc);
             this.panel1.Controls.Add(this.btnBatDau);
             this.panel1.Controls.Add(tENMHLabel);
-            this.panel1.Controls.Add(this.cmbKhoa);
+            this.panel1.Controls.Add(this.cbKhoa);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Location = new System.Drawing.Point(0, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1091, 173);
+            this.panel1.Size = new System.Drawing.Size(1257, 173);
             this.panel1.TabIndex = 7;
             // 
-            // cmbNhom
+            // cbNhom
             // 
-            this.cmbNhom.FormattingEnabled = true;
-            this.cmbNhom.Location = new System.Drawing.Point(455, 50);
-            this.cmbNhom.Name = "cmbNhom";
-            this.cmbNhom.Size = new System.Drawing.Size(194, 24);
-            this.cmbNhom.TabIndex = 15;
-            this.cmbNhom.SelectedIndexChanged += new System.EventHandler(this.cmbNhom_SelectedIndexChanged);
+            this.cbNhom.FormattingEnabled = true;
+            this.cbNhom.Location = new System.Drawing.Point(455, 50);
+            this.cbNhom.Name = "cbNhom";
+            this.cbNhom.Size = new System.Drawing.Size(194, 24);
+            this.cbNhom.TabIndex = 15;
+          
             // 
-            // cmbHocKi
+            // cbHocKi
             // 
-            this.cmbHocKi.FormattingEnabled = true;
-            this.cmbHocKi.Location = new System.Drawing.Point(136, 91);
-            this.cmbHocKi.Name = "cmbHocKi";
-            this.cmbHocKi.Size = new System.Drawing.Size(194, 24);
-            this.cmbHocKi.TabIndex = 14;
-            this.cmbHocKi.SelectedIndexChanged += new System.EventHandler(this.cmbHocKi_SelectedIndexChanged);
+            this.cbHocKi.FormattingEnabled = true;
+            this.cbHocKi.Location = new System.Drawing.Point(136, 91);
+            this.cbHocKi.Name = "cbHocKi";
+            this.cbHocKi.Size = new System.Drawing.Size(194, 24);
+            this.cbHocKi.TabIndex = 14;
+            this.cbHocKi.SelectedIndexChanged += new System.EventHandler(this.cbHocKi_SelectedIndexChanged);
             // 
-            // cmbNienKhoa
+            // cbNienKhoa
             // 
-            this.cmbNienKhoa.FormattingEnabled = true;
-            this.cmbNienKhoa.Location = new System.Drawing.Point(136, 52);
-            this.cmbNienKhoa.Name = "cmbNienKhoa";
-            this.cmbNienKhoa.Size = new System.Drawing.Size(194, 24);
-            this.cmbNienKhoa.TabIndex = 13;
-            this.cmbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbNienKhoa_SelectedIndexChanged);
+            this.cbNienKhoa.FormattingEnabled = true;
+            this.cbNienKhoa.Location = new System.Drawing.Point(136, 52);
+            this.cbNienKhoa.Name = "cbNienKhoa";
+            this.cbNienKhoa.Size = new System.Drawing.Size(194, 24);
+            this.cbNienKhoa.TabIndex = 13;
+            this.cbNienKhoa.SelectedIndexChanged += new System.EventHandler(this.cbNienKhoa_SelectedIndexChanged);
             // 
             // btnThoat
             // 
@@ -159,21 +164,22 @@ namespace QLDSVHTC
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(264, 130);
+            this.btnCapNhat.Location = new System.Drawing.Point(263, 130);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(94, 29);
             this.btnCapNhat.TabIndex = 11;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
-            // cmbMonHoc
+            // cbMonHoc
             // 
-            this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(455, 84);
-            this.cmbMonHoc.Name = "cmbMonHoc";
-            this.cmbMonHoc.Size = new System.Drawing.Size(194, 24);
-            this.cmbMonHoc.TabIndex = 10;
+            this.cbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonHoc.FormattingEnabled = true;
+            this.cbMonHoc.Location = new System.Drawing.Point(455, 84);
+            this.cbMonHoc.Name = "cbMonHoc";
+            this.cbMonHoc.Size = new System.Drawing.Size(194, 24);
+            this.cbMonHoc.TabIndex = 10;
+          
             // 
             // btnBatDau
             // 
@@ -181,24 +187,24 @@ namespace QLDSVHTC
             this.btnBatDau.Name = "btnBatDau";
             this.btnBatDau.Size = new System.Drawing.Size(109, 30);
             this.btnBatDau.TabIndex = 9;
-            this.btnBatDau.Text = "Nhập điểm";
+            this.btnBatDau.Text = "Bắt đầu";
             this.btnBatDau.Click += new System.EventHandler(this.btnBatDau_Click);
             // 
-            // cmbKhoa
+            // cbKhoa
             // 
-            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbKhoa.FormattingEnabled = true;
-            this.cmbKhoa.Location = new System.Drawing.Point(770, 15);
-            this.cmbKhoa.Name = "cmbKhoa";
-            this.cmbKhoa.Size = new System.Drawing.Size(271, 24);
-            this.cmbKhoa.TabIndex = 5;
-            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
+            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(783, 16);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(271, 24);
+            this.cbKhoa.TabIndex = 5;
+            this.cbKhoa.SelectedIndexChanged += new System.EventHandler(this.cbKhoa_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(685, 15);
+            this.label3.Location = new System.Drawing.Point(670, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 24);
             this.label3.TabIndex = 4;
@@ -241,131 +247,160 @@ namespace QLDSVHTC
             this.label5.TabIndex = 1;
             this.label5.Text = "Nhập thông tin:";
             // 
-            // bdsMH
-            // 
-            this.bdsMH.DataMember = "MONHOC";
-            this.bdsMH.DataSource = this.dS_SV1;
-            // 
             // dS_SV1
             // 
             this.dS_SV1.DataSetName = "DS_SV1";
             this.dS_SV1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // MONHOCTableAdapter
+            // sINHVIENBindingSource
             // 
-            this.MONHOCTableAdapter.ClearBeforeFill = true;
+            this.sINHVIENBindingSource.DataMember = "SINHVIEN";
+            this.sINHVIENBindingSource.DataSource = this.dS_SV1;
             // 
-            // DiemGridControl
+            // sINHVIENTableAdapter
             // 
-            this.DiemGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DiemGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.DiemGridControl.Location = new System.Drawing.Point(0, 254);
-            this.DiemGridControl.MainView = this.gridView1;
-            this.DiemGridControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.DiemGridControl.Name = "DiemGridControl";
-            this.DiemGridControl.Size = new System.Drawing.Size(1091, 421);
-            this.DiemGridControl.TabIndex = 16;
-            this.DiemGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.sINHVIENTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DANGKYTableAdapter = null;
+            this.tableAdapterManager.GIANGVIENTableAdapter = null;
+            this.tableAdapterManager.KHOATableAdapter = null;
+            this.tableAdapterManager.LOPTableAdapter = null;
+            this.tableAdapterManager.LOPTINCHITableAdapter = null;
+            this.tableAdapterManager.MONHOCTableAdapter = null;
+            this.tableAdapterManager.SINHVIENTableAdapter = this.sINHVIENTableAdapter;
+            this.tableAdapterManager.UpdateOrder = QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // sP_BDMHBindingSource
+            // 
+            this.sP_BDMHBindingSource.DataMember = "SP_BDMH";
+            this.sP_BDMHBindingSource.DataSource = this.dS_SV1;
+            // 
+            // sP_BDMHTableAdapter
+            // 
+            this.sP_BDMHTableAdapter.ClearBeforeFill = true;
+            // 
+            // sP_BDMHGridControl
+            // 
+            this.sP_BDMHGridControl.DataSource = this.sP_BDMHBindingSource;
+            this.sP_BDMHGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sP_BDMHGridControl.Location = new System.Drawing.Point(0, 215);
+            this.sP_BDMHGridControl.MainView = this.gridView1;
+            this.sP_BDMHGridControl.Name = "sP_BDMHGridControl";
+            this.sP_BDMHGridControl.Size = new System.Drawing.Size(1257, 189);
+            this.sP_BDMHGridControl.TabIndex = 8;
+            this.sP_BDMHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
-            this.gridView1.DetailHeight = 682;
-            this.gridView1.GridControl = this.DiemGridControl;
+            this.colMALC,
+            this.colMASV,
+            this.colHOTEN,
+            this.colDIEM_CC,
+            this.colDIEM_GK,
+            this.colDIEM_CK,
+            this.colDIEM_TK});
+            this.gridView1.GridControl = this.sP_BDMHGridControl;
             this.gridView1.Name = "gridView1";
             // 
-            // gridColumn1
+            // colMALC
             // 
-            this.gridColumn1.Caption = "Mã lớp tín chỉ";
-            this.gridColumn1.MinWidth = 31;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 117;
+            this.colMALC.FieldName = "MALC";
+            this.colMALC.MinWidth = 25;
+            this.colMALC.Name = "colMALC";
+            this.colMALC.Visible = true;
+            this.colMALC.VisibleIndex = 0;
+            this.colMALC.Width = 94;
             // 
-            // gridColumn2
+            // colMASV
             // 
-            this.gridColumn2.Caption = "Mã sinh viên";
-            this.gridColumn2.MinWidth = 31;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 6;
-            this.gridColumn2.Width = 117;
+            this.colMASV.FieldName = "MASV";
+            this.colMASV.MinWidth = 25;
+            this.colMASV.Name = "colMASV";
+            this.colMASV.Visible = true;
+            this.colMASV.VisibleIndex = 1;
+            this.colMASV.Width = 94;
             // 
-            // gridColumn3
+            // colHOTEN
             // 
-            this.gridColumn3.Caption = "Họ tên";
-            this.gridColumn3.MinWidth = 31;
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 117;
+            this.colHOTEN.FieldName = "HOTEN";
+            this.colHOTEN.MinWidth = 25;
+            this.colHOTEN.Name = "colHOTEN";
+            this.colHOTEN.Visible = true;
+            this.colHOTEN.VisibleIndex = 2;
+            this.colHOTEN.Width = 94;
             // 
-            // gridColumn4
+            // colDIEM_CC
             // 
-            this.gridColumn4.Caption = "Điểm chuyên cần";
-            this.gridColumn4.MinWidth = 31;
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 117;
+            this.colDIEM_CC.FieldName = "DIEM_CC";
+            this.colDIEM_CC.MinWidth = 25;
+            this.colDIEM_CC.Name = "colDIEM_CC";
+            this.colDIEM_CC.Visible = true;
+            this.colDIEM_CC.VisibleIndex = 3;
+            this.colDIEM_CC.Width = 94;
             // 
-            // gridColumn5
+            // colDIEM_GK
             // 
-            this.gridColumn5.Caption = "Điểm giữa kì";
-            this.gridColumn5.MinWidth = 31;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 117;
+            this.colDIEM_GK.FieldName = "DIEM_GK";
+            this.colDIEM_GK.MinWidth = 25;
+            this.colDIEM_GK.Name = "colDIEM_GK";
+            this.colDIEM_GK.Visible = true;
+            this.colDIEM_GK.VisibleIndex = 4;
+            this.colDIEM_GK.Width = 94;
             // 
-            // gridColumn6
+            // colDIEM_CK
             // 
-            this.gridColumn6.Caption = "Điểm cuối kì";
-            this.gridColumn6.MinWidth = 31;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 117;
+            this.colDIEM_CK.FieldName = "DIEM_CK";
+            this.colDIEM_CK.MinWidth = 25;
+            this.colDIEM_CK.Name = "colDIEM_CK";
+            this.colDIEM_CK.Visible = true;
+            this.colDIEM_CK.VisibleIndex = 5;
+            this.colDIEM_CK.Width = 94;
             // 
-            // gridColumn7
+            // colDIEM_TK
             // 
-            this.gridColumn7.Caption = "Điểm tổng kết";
-            this.gridColumn7.MinWidth = 31;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.OptionsColumn.ReadOnly = true;
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 3;
-            this.gridColumn7.Width = 117;
+            this.colDIEM_TK.FieldName = "DIEM_TK";
+            this.colDIEM_TK.MinWidth = 25;
+            this.colDIEM_TK.Name = "colDIEM_TK";
+            this.colDIEM_TK.Visible = true;
+            this.colDIEM_TK.VisibleIndex = 6;
+            this.colDIEM_TK.Width = 94;
             // 
-            // FormDiem
+            // bdsMONHOC
+            // 
+            this.bdsMONHOC.DataMember = "MONHOC";
+            this.bdsMONHOC.DataSource = this.dS_SV1;
+            // 
+            // mONHOCTableAdapter
+            // 
+            this.mONHOCTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormDIEM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 675);
-            this.Controls.Add(this.DiemGridControl);
+            this.ClientSize = new System.Drawing.Size(1257, 718);
+            this.Controls.Add(this.sP_BDMHGridControl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelControl1);
-            this.Name = "FormDiem";
-            this.Text = "FormDiem";
-            this.Load += new System.EventHandler(this.FormDiem_Load);
+            this.Name = "FormDIEM";
+            this.Text = "FormDIEM";
+            this.Load += new System.EventHandler(this.FormDIEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiemGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sINHVIENBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_BDMHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_BDMHGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,30 +410,35 @@ namespace QLDSVHTC
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbNhom;
-        private System.Windows.Forms.ComboBox cmbHocKi;
-        private System.Windows.Forms.ComboBox cmbNienKhoa;
+        private System.Windows.Forms.ComboBox cbNhom;
+        private System.Windows.Forms.ComboBox cbHocKi;
+        private System.Windows.Forms.ComboBox cbNienKhoa;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnCapNhat;
-        private System.Windows.Forms.ComboBox cmbMonHoc;
+        private System.Windows.Forms.ComboBox cbMonHoc;
         private DevExpress.XtraEditors.SimpleButton btnBatDau;
-        private System.Windows.Forms.ComboBox cmbKhoa;
+        private System.Windows.Forms.ComboBox cbKhoa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private DS_SV1 dS_SV1;
-        private System.Windows.Forms.BindingSource bdsMH;
-        private DS_SV1TableAdapters.MONHOCTableAdapter MONHOCTableAdapter;
-        private DevExpress.XtraGrid.GridControl DiemGridControl;
+        private System.Windows.Forms.BindingSource sINHVIENBindingSource;
+        private DS_SV1TableAdapters.SINHVIENTableAdapter sINHVIENTableAdapter;
+        private DS_SV1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource sP_BDMHBindingSource;
+        private DS_SV1TableAdapters.SP_BDMHTableAdapter sP_BDMHTableAdapter;
+        private DevExpress.XtraGrid.GridControl sP_BDMHGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn colMALC;
+        private DevExpress.XtraGrid.Columns.GridColumn colMASV;
+        private DevExpress.XtraGrid.Columns.GridColumn colHOTEN;
+        private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CC;
+        private DevExpress.XtraGrid.Columns.GridColumn colDIEM_GK;
+        private DevExpress.XtraGrid.Columns.GridColumn colDIEM_CK;
+        private DevExpress.XtraGrid.Columns.GridColumn colDIEM_TK;
+        private System.Windows.Forms.BindingSource bdsMONHOC;
+        private DS_SV1TableAdapters.MONHOCTableAdapter mONHOCTableAdapter;
     }
 }
