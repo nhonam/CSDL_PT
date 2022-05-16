@@ -364,6 +364,7 @@ namespace QLDSVHTC
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1253, 106);
             this.panelControl1.TabIndex = 4;
+          
             // 
             // cmbKhoa
             // 

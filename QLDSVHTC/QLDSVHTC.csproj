@@ -93,10 +93,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_SV1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormDangKi.cs">
+    <Compile Include="FormLTC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDangKi.Designer.cs">
+    <Compile Include="FormLTC.Designer.cs">
+      <DependentUpon>FormLTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormTaoTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormTaoTaiKhoan.Designer.cs">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormMH.Designer.cs">
+      <DependentUpon>FormMH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormDangKi.Designer.cs">
       <DependentUpon>FormDangKi.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormDIEM.cs">
@@ -131,7 +149,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDangKi.resx">
+    <EmbeddedResource Include="FormLTC.resx">
+      <DependentUpon>FormLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormTaoTaiKhoan.resx">
+      <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormMH.resx">
+      <DependentUpon>FormMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormDangKi.resx">
       <DependentUpon>FormDangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDIEM.resx">

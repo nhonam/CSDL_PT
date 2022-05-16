@@ -259,6 +259,42 @@ namespace QLDSVHTC
             }
         }
 
+        private void barButtonItem1_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormMH));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormMH f = new FormMH();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void BTNTTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormTaoTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormTaoTaiKhoan f = new FormTaoTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormLTC f = new FormLTC();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
 
 
 

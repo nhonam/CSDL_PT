@@ -41,6 +41,7 @@ namespace QLDSVHTC
             this.btnDIEM = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangKi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.rpNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -56,6 +57,7 @@ namespace QLDSVHTC
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DiemButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -75,10 +77,12 @@ namespace QLDSVHTC
             this.btnLogout,
             this.btnDIEM,
             this.btnDangKi,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.barButtonItem1,
+            this.barButtonItem4});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ribbonControl1.MaxItemId = 10;
+            this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpNHAPXUAT,
@@ -124,6 +128,7 @@ namespace QLDSVHTC
             this.BTNTTK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BTNTTK.ImageOptions.LargeImage")));
             this.BTNTTK.Name = "BTNTTK";
             this.BTNTTK.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.BTNTTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BTNTTK_ItemClick);
             // 
             // BTNTHOAT
             // 
@@ -158,6 +163,7 @@ namespace QLDSVHTC
             this.btnDangKi.Caption = "DANGKI";
             this.btnDangKi.Id = 8;
             this.btnDangKi.Name = "btnDangKi";
+            this.btnDangKi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnDangKi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem3
@@ -165,6 +171,14 @@ namespace QLDSVHTC
             this.barButtonItem3.Caption = "barButtonItem3";
             this.barButtonItem3.Id = 9;
             this.barButtonItem3.Name = "barButtonItem3";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "MON HOC";
+            this.barButtonItem1.Id = 10;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
             // 
             // rpNHAPXUAT
             // 
@@ -179,6 +193,8 @@ namespace QLDSVHTC
             this.ribbonPageGroup3.ItemLinks.Add(this.btnLOPHOC);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnDIEM);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnDangKi);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "QUAN LY";
             // 
@@ -268,6 +284,14 @@ namespace QLDSVHTC
             // 
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Caption = "LOP TIN CHI";
+            this.barButtonItem4.Id = 11;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -317,6 +341,8 @@ namespace QLDSVHTC
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem btnDangKi;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }
 

@@ -332,5 +332,6 @@ namespace QLDSVHTC
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
         }
 
+      
     }
 }
