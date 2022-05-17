@@ -1,5 +1,6 @@
 ﻿
 using DevExpress.XtraBars;
+using QLDSVHTC.Report;
 using System;
 using System.Windows.Forms;
 
@@ -326,6 +327,43 @@ namespace QLDSVHTC
             else
             {
                 Frpt_PHIEUDIEM f = new Frpt_PHIEUDIEM();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void ho_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FrptDSHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FrptDSHocPhi f = new FrptDSHocPhi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FrptDSLopTinChi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FrptDSLopTinChi f = new FrptDSLopTinChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+
+        }
+
+        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FRpDSSVDK));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FRpDSSVDK f = new FRpDSSVDK();
                 f.MdiParent = this;
                 f.Show();
             }

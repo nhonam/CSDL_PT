@@ -156,16 +156,34 @@
     <Compile Include="Form\FormSV.Designer.cs">
       <DependentUpon>FormSV.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\Frpt_PHIEUDIEM.cs">
+    <Compile Include="Report\ReportDSSVDK\FRpDSSVDK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\Frpt_PHIEUDIEM.Designer.cs">
+    <Compile Include="Report\ReportDSSVDK\FRpDSSVDK.Designer.cs">
+      <DependentUpon>FRpDSSVDK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDSLopTinChi\FrptDSLopTinChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDSLopTinChi\FrptDSLopTinChi.Designer.cs">
+      <DependentUpon>FrptDSLopTinChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDSHocPhi\FrptDSHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDSHocPhi\FrptDSHocPhi.Designer.cs">
+      <DependentUpon>FrptDSHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportPhieuDiem\Frpt_PHIEUDIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportPhieuDiem\Frpt_PHIEUDIEM.Designer.cs">
       <DependentUpon>Frpt_PHIEUDIEM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\FrptBDMH.cs">
+    <Compile Include="Report\ReportBangDiemMH\FrptBDMH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Report\FrptBDMH.Designer.cs">
+    <Compile Include="Report\ReportBangDiemMH\FrptBDMH.Designer.cs">
       <DependentUpon>FrptBDMH.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -175,17 +193,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Report\Xprt_BD_MH_Report.cs">
+    <Compile Include="Report\ReportBangDiemMH\Xprt_BD_MH_Report.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\Xprt_BD_MH_Report.Designer.cs">
+    <Compile Include="Report\ReportBangDiemMH\Xprt_BD_MH_Report.Designer.cs">
       <DependentUpon>Xprt_BD_MH_Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\XrptPhieuDiem.cs">
+    <Compile Include="Report\ReportDSHocPhi\XrptDSHocPhi.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\XrptPhieuDiem.Designer.cs">
+    <Compile Include="Report\ReportDSHocPhi\XrptDSHocPhi.Designer.cs">
+      <DependentUpon>XrptDSHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportPhieuDiem\XrptPhieuDiem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportPhieuDiem\XrptPhieuDiem.Designer.cs">
       <DependentUpon>XrptPhieuDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDSLopTinChi\RpDSLopTinChi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDSLopTinChi\RpDSLopTinChi.Designer.cs">
+      <DependentUpon>RpDSLopTinChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportDSSVDK\XpDSSVDK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDSSVDK\XpDSSVDK.Designer.cs">
+      <DependentUpon>XpDSSVDK.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\FormHOCPHI.resx">
       <DependentUpon>FormHOCPHI.cs</DependentUpon>
@@ -217,10 +253,19 @@
     <EmbeddedResource Include="Form\FormSV.resx">
       <DependentUpon>FormSV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Frpt_PHIEUDIEM.resx">
+    <EmbeddedResource Include="Report\ReportDSSVDK\FRpDSSVDK.resx">
+      <DependentUpon>FRpDSSVDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDSLopTinChi\FrptDSLopTinChi.resx">
+      <DependentUpon>FrptDSLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDSHocPhi\FrptDSHocPhi.resx">
+      <DependentUpon>FrptDSHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportPhieuDiem\Frpt_PHIEUDIEM.resx">
       <DependentUpon>Frpt_PHIEUDIEM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\FrptBDMH.resx">
+    <EmbeddedResource Include="Report\ReportBangDiemMH\FrptBDMH.resx">
       <DependentUpon>FrptBDMH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -233,11 +278,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report\Xprt_BD_MH_Report.resx">
+    <EmbeddedResource Include="Report\ReportBangDiemMH\Xprt_BD_MH_Report.resx">
       <DependentUpon>Xprt_BD_MH_Report.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\XrptPhieuDiem.resx">
+    <EmbeddedResource Include="Report\ReportDSHocPhi\XrptDSHocPhi.resx">
+      <DependentUpon>XrptDSHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportPhieuDiem\XrptPhieuDiem.resx">
       <DependentUpon>XrptPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDSLopTinChi\RpDSLopTinChi.resx">
+      <DependentUpon>RpDSLopTinChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDSSVDK\XpDSSVDK.resx">
+      <DependentUpon>XpDSSVDK.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

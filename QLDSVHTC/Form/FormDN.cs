@@ -104,6 +104,7 @@ namespace QLDSVHTC
             Program.mloginDN = Program.mlogin;
             Program.passwordDN = Program.password;
 
+
             string strLenh = "EXEC dbo.SP_Lay_Thong_Tin_NV_Tu_Login '" + Program.mlogin + "'";
             Program.myReader = Program.ExecSqlDataReader(strLenh);
             if (Program.myReader == null) return;
@@ -116,7 +117,21 @@ namespace QLDSVHTC
                 Program.username = Program.myReader.GetString(0);
             }
             Program.myReader.Close();
+            if (Convert.IsDBNull(Program.username))
+            {
+                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
+                return;
+            }
 
+            if (cmbKhoa.Text.ToString().Equals("Phòng Kế Toán") && isSinhVien)
+            {
+                MessageBox.Show("sinh viên không được đăng nhập vào phòng kế toán");
+                return;
+            }
+
+            if (isSinhVien==true)
+            { 
+          
             string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txtLogin.Text + "', '" + txtPass.Text + "'";
             SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 
@@ -128,11 +143,7 @@ namespace QLDSVHTC
 
             reader.Read();
 
-            if (Convert.IsDBNull(Program.username))
-            {
-                MessageBox.Show("Login bạn nhập không có quyền truy cập dữ liệu\n Bạn xem lại username, password", "", MessageBoxButtons.OK);
-                return;
-            }
+
 
             if (isSinhVien == true)
             {
@@ -145,6 +156,7 @@ namespace QLDSVHTC
             }
             Program.conn.Close();
             reader.Close();
+        }
             MessageBox.Show("Đăng nhập thành công !!!");
             Form f = new FormMain();
             f.ShowDialog();

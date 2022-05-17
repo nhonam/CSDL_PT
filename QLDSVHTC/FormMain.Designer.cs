@@ -45,6 +45,10 @@ namespace QLDSVHTC
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.ho = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.rpNHAPXUAT = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpBAOCAO = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -60,7 +64,7 @@ namespace QLDSVHTC
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DiemButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -85,10 +89,14 @@ namespace QLDSVHTC
             this.barButtonItem4,
             this.barButtonItem5,
             this.barButtonItem6,
-            this.barButtonItem7});
+            this.barButtonItem7,
+            this.barButtonItem8,
+            this.ho,
+            this.barButtonItem9,
+            this.barButtonItem10});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(5);
-            this.ribbonControl1.MaxItemId = 15;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.ribbonControl1.MaxItemId = 19;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpNHAPXUAT,
@@ -210,6 +218,36 @@ namespace QLDSVHTC
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
             // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "Phiếu Điểm";
+            this.barButtonItem7.Id = 14;
+            this.barButtonItem7.Name = "barButtonItem7";
+            this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "barButtonItem8";
+            this.barButtonItem8.Id = 15;
+            this.barButtonItem8.Name = "barButtonItem8";
+            // 
+            // ho
+            // 
+            this.ho.Caption = "HocPhi";
+            this.ho.Id = 16;
+            this.ho.Name = "ho";
+            this.ho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.ho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ho_ItemClick);
+            // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "DSLOPTINCHI";
+            this.barButtonItem9.Id = 17;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            // 
             // rpNHAPXUAT
             // 
             this.rpNHAPXUAT.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -240,6 +278,9 @@ namespace QLDSVHTC
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup2.ItemLinks.Add(this.ho);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
@@ -262,7 +303,7 @@ namespace QLDSVHTC
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 690);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(5);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(1213, 33);
@@ -317,12 +358,12 @@ namespace QLDSVHTC
             // 
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // barButtonItem7
+            // barButtonItem10
             // 
-            this.barButtonItem7.Caption = "Phiếu Điểm";
-            this.barButtonItem7.Id = 14;
-            this.barButtonItem7.Name = "barButtonItem7";
-            this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
+            this.barButtonItem10.Caption = "danh sách sinh viên đăng kí lớp tin chỉ";
+            this.barButtonItem10.Id = 18;
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // FormMain
             // 
@@ -378,6 +419,10 @@ namespace QLDSVHTC
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.XtraBars.BarButtonItem ho;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
     }
 }
 

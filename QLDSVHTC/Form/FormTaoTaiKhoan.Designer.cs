@@ -205,6 +205,7 @@ namespace QLDSVHTC
             this.txbMatKhau.Size = new System.Drawing.Size(224, 22);
             this.txbMatKhau.TabIndex = 2;
             this.txbMatKhau.UseSystemPasswordChar = true;
+            this.txbMatKhau.TextChanged += new System.EventHandler(this.txbMatKhau_TextChanged);
             // 
             // label2
             // 
@@ -222,6 +223,7 @@ namespace QLDSVHTC
             this.txbTenLogin.Name = "txbTenLogin";
             this.txbTenLogin.Size = new System.Drawing.Size(224, 22);
             this.txbTenLogin.TabIndex = 2;
+            this.txbTenLogin.TextChanged += new System.EventHandler(this.txbTenLogin_TextChanged);
             // 
             // label1
             // 
