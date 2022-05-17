@@ -30,7 +30,6 @@ namespace QLDSVHTC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLTC));
             System.Windows.Forms.Label nHOMLabel;
             System.Windows.Forms.Label hUYLOPLabel;
             System.Windows.Forms.Label sOSVTOITHIEULabel;
@@ -41,6 +40,7 @@ namespace QLDSVHTC
             System.Windows.Forms.Label mAMHLabel;
             System.Windows.Forms.Label hOCKYLabel;
             System.Windows.Forms.Label nIENKHOALabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLTC));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -75,6 +75,8 @@ namespace QLDSVHTC
             this.bdsLopTinChi = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTINCHITableAdapter = new QLDSVHTC.DS_SV1TableAdapters.LOPTINCHITableAdapter();
             this.tableAdapterManager = new QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager();
+            this.DANGKYTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.DANGKYTableAdapter();
+            this.MONHOCTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.MONHOCTableAdapter();
             this.lOPTINCHIGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALTC = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -87,9 +89,7 @@ namespace QLDSVHTC
             this.colSOSVTOITHIEU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHUYLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bdsMonHoc = new System.Windows.Forms.BindingSource(this.components);
-            this.MONHOCTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.MONHOCTableAdapter();
             this.bdsDangKi = new System.Windows.Forms.BindingSource(this.components);
-            this.DANGKYTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.DANGKYTableAdapter();
             nHOMLabel = new System.Windows.Forms.Label();
             hUYLOPLabel = new System.Windows.Forms.Label();
             sOSVTOITHIEULabel = new System.Windows.Forms.Label();
@@ -120,6 +120,96 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.bdsMonHoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDangKi)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nHOMLabel
+            // 
+            nHOMLabel.AutoSize = true;
+            nHOMLabel.Location = new System.Drawing.Point(578, 71);
+            nHOMLabel.Name = "nHOMLabel";
+            nHOMLabel.Size = new System.Drawing.Size(45, 17);
+            nHOMLabel.TabIndex = 40;
+            nHOMLabel.Text = "Nhóm";
+            // 
+            // hUYLOPLabel
+            // 
+            hUYLOPLabel.AutoSize = true;
+            hUYLOPLabel.Location = new System.Drawing.Point(575, 200);
+            hUYLOPLabel.Name = "hUYLOPLabel";
+            hUYLOPLabel.Size = new System.Drawing.Size(55, 17);
+            hUYLOPLabel.TabIndex = 38;
+            hUYLOPLabel.Text = "Hủy lớp";
+            // 
+            // sOSVTOITHIEULabel
+            // 
+            sOSVTOITHIEULabel.AutoSize = true;
+            sOSVTOITHIEULabel.Location = new System.Drawing.Point(256, 201);
+            sOSVTOITHIEULabel.Name = "sOSVTOITHIEULabel";
+            sOSVTOITHIEULabel.Size = new System.Drawing.Size(95, 17);
+            sOSVTOITHIEULabel.TabIndex = 36;
+            sOSVTOITHIEULabel.Text = "Số sv tối thiểu";
+            // 
+            // mAKHOALabel
+            // 
+            mAKHOALabel.AutoSize = true;
+            mAKHOALabel.Location = new System.Drawing.Point(257, 33);
+            mAKHOALabel.Name = "mAKHOALabel";
+            mAKHOALabel.Size = new System.Drawing.Size(59, 17);
+            mAKHOALabel.TabIndex = 34;
+            mAKHOALabel.Text = "Mã khoa";
+            // 
+            // tENLabel
+            // 
+            tENLabel.AutoSize = true;
+            tENLabel.Location = new System.Drawing.Point(256, 154);
+            tENLabel.Name = "tENLabel";
+            tENLabel.Size = new System.Drawing.Size(97, 17);
+            tENLabel.TabIndex = 32;
+            tENLabel.Text = "Tên giảng viên";
+            // 
+            // mAGVLabel
+            // 
+            mAGVLabel.AutoSize = true;
+            mAGVLabel.Location = new System.Drawing.Point(576, 159);
+            mAGVLabel.Name = "mAGVLabel";
+            mAGVLabel.Size = new System.Drawing.Size(91, 17);
+            mAGVLabel.TabIndex = 30;
+            mAGVLabel.Text = "Mã giảng viên";
+            // 
+            // tENMHLabel
+            // 
+            tENMHLabel.AutoSize = true;
+            tENMHLabel.Location = new System.Drawing.Point(256, 110);
+            tENMHLabel.Name = "tENMHLabel";
+            tENMHLabel.Size = new System.Drawing.Size(90, 17);
+            tENMHLabel.TabIndex = 29;
+            tENMHLabel.Text = "Tên môn học";
+            // 
+            // mAMHLabel
+            // 
+            mAMHLabel.AutoSize = true;
+            mAMHLabel.Location = new System.Drawing.Point(576, 113);
+            mAMHLabel.Name = "mAMHLabel";
+            mAMHLabel.Size = new System.Drawing.Size(84, 17);
+            mAMHLabel.TabIndex = 27;
+            mAMHLabel.Text = "Mã môn học";
+            // 
+            // hOCKYLabel
+            // 
+            hOCKYLabel.AutoSize = true;
+            hOCKYLabel.Location = new System.Drawing.Point(256, 72);
+            hOCKYLabel.Name = "hOCKYLabel";
+            hOCKYLabel.Size = new System.Drawing.Size(51, 17);
+            hOCKYLabel.TabIndex = 25;
+            hOCKYLabel.Text = "Học kỳ";
+            // 
+            // nIENKHOALabel
+            // 
+            nIENKHOALabel.AutoSize = true;
+            nIENKHOALabel.Location = new System.Drawing.Point(576, 34);
+            nIENKHOALabel.Name = "nIENKHOALabel";
+            nIENKHOALabel.Size = new System.Drawing.Size(68, 17);
+            nIENKHOALabel.TabIndex = 23;
+            nIENKHOALabel.Text = "Niên khóa";
             // 
             // barManager1
             // 
@@ -325,15 +415,6 @@ namespace QLDSVHTC
             this.cbTenMonHoc.Size = new System.Drawing.Size(176, 24);
             this.cbTenMonHoc.TabIndex = 42;
             // 
-            // nHOMLabel
-            // 
-            nHOMLabel.AutoSize = true;
-            nHOMLabel.Location = new System.Drawing.Point(578, 71);
-            nHOMLabel.Name = "nHOMLabel";
-            nHOMLabel.Size = new System.Drawing.Size(45, 17);
-            nHOMLabel.TabIndex = 40;
-            nHOMLabel.Text = "Nhóm";
-            // 
             // speNhom
             // 
             this.speNhom.EditValue = new decimal(new int[] {
@@ -349,15 +430,6 @@ namespace QLDSVHTC
             this.speNhom.Size = new System.Drawing.Size(197, 24);
             this.speNhom.TabIndex = 41;
             // 
-            // hUYLOPLabel
-            // 
-            hUYLOPLabel.AutoSize = true;
-            hUYLOPLabel.Location = new System.Drawing.Point(575, 200);
-            hUYLOPLabel.Name = "hUYLOPLabel";
-            hUYLOPLabel.Size = new System.Drawing.Size(55, 17);
-            hUYLOPLabel.TabIndex = 38;
-            hUYLOPLabel.Text = "Hủy lớp";
-            // 
             // hUYLOPCheckEdit
             // 
             this.hUYLOPCheckEdit.Location = new System.Drawing.Point(645, 197);
@@ -366,15 +438,6 @@ namespace QLDSVHTC
             this.hUYLOPCheckEdit.Properties.Caption = "";
             this.hUYLOPCheckEdit.Size = new System.Drawing.Size(94, 24);
             this.hUYLOPCheckEdit.TabIndex = 39;
-            // 
-            // sOSVTOITHIEULabel
-            // 
-            sOSVTOITHIEULabel.AutoSize = true;
-            sOSVTOITHIEULabel.Location = new System.Drawing.Point(256, 201);
-            sOSVTOITHIEULabel.Name = "sOSVTOITHIEULabel";
-            sOSVTOITHIEULabel.Size = new System.Drawing.Size(95, 17);
-            sOSVTOITHIEULabel.TabIndex = 36;
-            sOSVTOITHIEULabel.Text = "Số sv tối thiểu";
             // 
             // speSoSVToiThieu
             // 
@@ -391,15 +454,6 @@ namespace QLDSVHTC
             this.speSoSVToiThieu.Size = new System.Drawing.Size(176, 24);
             this.speSoSVToiThieu.TabIndex = 37;
             // 
-            // mAKHOALabel
-            // 
-            mAKHOALabel.AutoSize = true;
-            mAKHOALabel.Location = new System.Drawing.Point(257, 33);
-            mAKHOALabel.Name = "mAKHOALabel";
-            mAKHOALabel.Size = new System.Drawing.Size(59, 17);
-            mAKHOALabel.TabIndex = 34;
-            mAKHOALabel.Text = "Mã khoa";
-            // 
             // txbMaKhoa
             // 
             this.txbMaKhoa.Location = new System.Drawing.Point(359, 31);
@@ -408,15 +462,6 @@ namespace QLDSVHTC
             this.txbMaKhoa.Properties.ReadOnly = true;
             this.txbMaKhoa.Size = new System.Drawing.Size(176, 22);
             this.txbMaKhoa.TabIndex = 35;
-            // 
-            // tENLabel
-            // 
-            tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(256, 154);
-            tENLabel.Name = "tENLabel";
-            tENLabel.Size = new System.Drawing.Size(97, 17);
-            tENLabel.TabIndex = 32;
-            tENLabel.Text = "Tên giảng viên";
             // 
             // cbTenGiangVien
             // 
@@ -427,15 +472,6 @@ namespace QLDSVHTC
             this.cbTenGiangVien.Size = new System.Drawing.Size(176, 24);
             this.cbTenGiangVien.TabIndex = 33;
             // 
-            // mAGVLabel
-            // 
-            mAGVLabel.AutoSize = true;
-            mAGVLabel.Location = new System.Drawing.Point(576, 159);
-            mAGVLabel.Name = "mAGVLabel";
-            mAGVLabel.Size = new System.Drawing.Size(91, 17);
-            mAGVLabel.TabIndex = 30;
-            mAGVLabel.Text = "Mã giảng viên";
-            // 
             // txbMaGiangVien
             // 
             this.txbMaGiangVien.Location = new System.Drawing.Point(694, 156);
@@ -445,24 +481,6 @@ namespace QLDSVHTC
             this.txbMaGiangVien.Size = new System.Drawing.Size(197, 22);
             this.txbMaGiangVien.TabIndex = 31;
             // 
-            // tENMHLabel
-            // 
-            tENMHLabel.AutoSize = true;
-            tENMHLabel.Location = new System.Drawing.Point(256, 110);
-            tENMHLabel.Name = "tENMHLabel";
-            tENMHLabel.Size = new System.Drawing.Size(90, 17);
-            tENMHLabel.TabIndex = 29;
-            tENMHLabel.Text = "Tên môn học";
-            // 
-            // mAMHLabel
-            // 
-            mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(576, 113);
-            mAMHLabel.Name = "mAMHLabel";
-            mAMHLabel.Size = new System.Drawing.Size(84, 17);
-            mAMHLabel.TabIndex = 27;
-            mAMHLabel.Text = "Mã môn học";
-            // 
             // txbMaMonHoc
             // 
             this.txbMaMonHoc.Location = new System.Drawing.Point(694, 110);
@@ -471,15 +489,6 @@ namespace QLDSVHTC
             this.txbMaMonHoc.Properties.ReadOnly = true;
             this.txbMaMonHoc.Size = new System.Drawing.Size(197, 22);
             this.txbMaMonHoc.TabIndex = 28;
-            // 
-            // hOCKYLabel
-            // 
-            hOCKYLabel.AutoSize = true;
-            hOCKYLabel.Location = new System.Drawing.Point(256, 72);
-            hOCKYLabel.Name = "hOCKYLabel";
-            hOCKYLabel.Size = new System.Drawing.Size(51, 17);
-            hOCKYLabel.TabIndex = 25;
-            hOCKYLabel.Text = "Học kỳ";
             // 
             // speHocKy
             // 
@@ -495,15 +504,6 @@ namespace QLDSVHTC
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.speHocKy.Size = new System.Drawing.Size(176, 24);
             this.speHocKy.TabIndex = 26;
-            // 
-            // nIENKHOALabel
-            // 
-            nIENKHOALabel.AutoSize = true;
-            nIENKHOALabel.Location = new System.Drawing.Point(576, 34);
-            nIENKHOALabel.Name = "nIENKHOALabel";
-            nIENKHOALabel.Size = new System.Drawing.Size(68, 17);
-            nIENKHOALabel.TabIndex = 23;
-            nIENKHOALabel.Text = "Niên khóa";
             // 
             // txbNienKhoa
             // 
@@ -561,6 +561,14 @@ namespace QLDSVHTC
             this.tableAdapterManager.MONHOCTableAdapter = this.MONHOCTableAdapter;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // DANGKYTableAdapter
+            // 
+            this.DANGKYTableAdapter.ClearBeforeFill = true;
+            // 
+            // MONHOCTableAdapter
+            // 
+            this.MONHOCTableAdapter.ClearBeforeFill = true;
             // 
             // lOPTINCHIGridControl
             // 
@@ -676,18 +684,10 @@ namespace QLDSVHTC
             this.bdsMonHoc.DataMember = "MONHOC";
             this.bdsMonHoc.DataSource = this.dS_SV1;
             // 
-            // MONHOCTableAdapter
-            // 
-            this.MONHOCTableAdapter.ClearBeforeFill = true;
-            // 
             // bdsDangKi
             // 
             this.bdsDangKi.DataMember = "FK_DANGKY_LOPTINCHI";
             this.bdsDangKi.DataSource = this.bdsLopTinChi;
-            // 
-            // DANGKYTableAdapter
-            // 
-            this.DANGKYTableAdapter.ClearBeforeFill = true;
             // 
             // FormLTC
             // 

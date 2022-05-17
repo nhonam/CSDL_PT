@@ -221,3 +221,9 @@ C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\o
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FormMH.resources
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FormTaoTaiKhoan.resources
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FormLTC.resources
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FormHocPhi.resources
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\bin\Debug\DevExpress.RichEdit.v19.2.Export.dll
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.FrptBDMH.resources
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.Xprt_BD_MH_Report.resources
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.Frpt_PHIEUDIEM.resources
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.XrptPhieuDiem.resources

@@ -168,8 +168,13 @@ namespace QLDSVHTC
         }
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
+            cmbKhoa.DataSource = Program.bds_dspm;
+            cmbKhoa.DisplayMember = "TENKHOA";
+            cmbKhoa.ValueMember = "TENSERVER";
             if (cmbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
+           
             Program.severname = cmbKhoa.SelectedValue.ToString();
             if (cmbKhoa.SelectedIndex != Program.mChinhanh)
             {
@@ -198,7 +203,7 @@ namespace QLDSVHTC
                 this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
 
 
-           /*     macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();*/
+                macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
             }
         }
 

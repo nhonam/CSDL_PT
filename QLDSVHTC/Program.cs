@@ -36,6 +36,7 @@ namespace QLDSVHTC
         public static String role = "";
 
         public static BindingSource bds_dspm = new BindingSource();
+      
         public static FormMain mainForm;
 
         public static int KetNoi()

@@ -87,6 +87,11 @@ namespace QLDSVHTC
 
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
+            cbKhoa.DataSource = Program.bds_dspm;
+            cbKhoa.DisplayMember = "TENKHOA";
+            cbKhoa.ValueMember = "TENSERVER";
             if (cbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
             Program.severname = cbKhoa.SelectedValue.ToString();

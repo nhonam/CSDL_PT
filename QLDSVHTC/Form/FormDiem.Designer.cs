@@ -133,7 +133,7 @@ namespace QLDSVHTC
             this.cbNhom.Name = "cbNhom";
             this.cbNhom.Size = new System.Drawing.Size(194, 24);
             this.cbNhom.TabIndex = 15;
-         
+    
             // 
             // cbHocKi
             // 

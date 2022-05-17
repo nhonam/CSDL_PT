@@ -26,7 +26,7 @@ namespace QLDSVHTC.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI;Initial Catalog=QLDSV_HTC;User ID=sa;Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DINHNHONAM;Initial Catalog=QLDSV_HTC;User ID=sa;Password=123")]
         public string QLDSV_HTCConnectionString {
             get {
                 return ((string)(this["QLDSV_HTCConnectionString"]));
@@ -36,11 +36,22 @@ namespace QLDSVHTC.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\SEVER1;Initial Catalog=QLDSV_HTC;Persist Security Info=True;User " +
-            "ID=sa;Password=123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DINHNHONAM\\SERVER1;Initial Catalog=QLDSV_HTC;Persist Security Info=Tr" +
+            "ue;User ID=sa;Password=123")]
         public string QLDSV_HTCConnectionString1 {
             get {
                 return ((string)(this["QLDSV_HTCConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DINHNHONAM\\SERVER3;Initial Catalog=QLDSV_HTC;Persist Security Info=Tr" +
+            "ue;User ID=sa;Password=123")]
+        public string QLDSV_HTCConnectionString2 {
+            get {
+                return ((string)(this["QLDSV_HTCConnectionString2"]));
             }
         }
     }

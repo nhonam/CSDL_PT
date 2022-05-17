@@ -52,7 +52,7 @@ namespace QLDSVHTC
         private void FormDN_Load(object sender, EventArgs e)
         {
             if (KetNoi_CSDLGOC() == 0) return;
-            LayDSPM("SELECT * FROM LINK0.QLDSV_HTC.dbo.V_DS_PHANMANH");
+            LayDSPM("SELECT * FROM LINK0.QLDSV_HTC.dbo.V_DS_PHANMANHDN");
             txtLogin.Text = "pgv";
             txtPass.Text = "123";
             cmbKhoa.SelectedIndex = 1;

@@ -96,12 +96,21 @@ namespace QLDSVHTC
             this.DSLTC_HUYgridControl.DataSource = this.bdsDSLTC_HUY;
         }
 
-        private void SINHVIENgridControl_Click(object sender, EventArgs e)
+        /* private void SINHVIENgridControl_Click(object sender, EventArgs e)
+         {
+             if (bdsSinhVien.Count > 0)
+             {
+                 txbMaSVDK.Text = ((DataRowView)bdsSinhVien[bdsSinhVien.Position])["MASV"].ToString();
+             }
+         }*/
+
+        private void SINHVIENgridControl_MouseClick(object sender, MouseEventArgs e)
         {
             if (bdsSinhVien.Count > 0)
             {
                 txbMaSVDK.Text = ((DataRowView)bdsSinhVien[bdsSinhVien.Position])["MASV"].ToString();
             }
+
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)

@@ -39,12 +39,15 @@
     <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Export, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Sparkline.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -93,10 +96,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_SV1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FormLTC.cs">
+    <Compile Include="Form\FormHOCPHI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLTC.Designer.cs">
+    <Compile Include="Form\FormHOCPHI.Designer.cs">
+      <DependentUpon>FormHOCPHI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLTC.Designer.cs">
       <DependentUpon>FormLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormTaoTaiKhoan.cs">
@@ -147,9 +156,41 @@
     <Compile Include="Form\FormSV.Designer.cs">
       <DependentUpon>FormSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Frpt_PHIEUDIEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Frpt_PHIEUDIEM.Designer.cs">
+      <DependentUpon>Frpt_PHIEUDIEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\FrptBDMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\FrptBDMH.Designer.cs">
+      <DependentUpon>FrptBDMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormLTC.resx">
+    <Compile Include="QLDSV_HTCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Xprt_BD_MH_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Xprt_BD_MH_Report.Designer.cs">
+      <DependentUpon>Xprt_BD_MH_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XrptPhieuDiem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XrptPhieuDiem.Designer.cs">
+      <DependentUpon>XrptPhieuDiem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\FormHOCPHI.resx">
+      <DependentUpon>FormHOCPHI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLTC.resx">
       <DependentUpon>FormLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormTaoTaiKhoan.resx">
@@ -176,6 +217,12 @@
     <EmbeddedResource Include="Form\FormSV.resx">
       <DependentUpon>FormSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Frpt_PHIEUDIEM.resx">
+      <DependentUpon>Frpt_PHIEUDIEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\FrptBDMH.resx">
+      <DependentUpon>FrptBDMH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -186,6 +233,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\Xprt_BD_MH_Report.resx">
+      <DependentUpon>Xprt_BD_MH_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XrptPhieuDiem.resx">
+      <DependentUpon>XrptPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
@@ -220,6 +273,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLDSV_HTCDataSet.xsc">
+      <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDSV_HTCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDSV_HTCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDSV_HTCDataSet.xss">
+      <DependentUpon>QLDSV_HTCDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -106,10 +106,6 @@ namespace QLDSVHTC
             this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             this.label10 = new System.Windows.Forms.Label();
             this.DSLTC_HUYgridControlTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.SP_LIST_SVHUYDANGKYTableAdapter();
-            this.mASSVToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.mASSVToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.fillToolStrip = new System.Windows.Forms.ToolStrip();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -137,7 +133,6 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
-            this.fillToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // bar2
@@ -470,11 +465,11 @@ namespace QLDSVHTC
             // 
             this.LOPTINCHIgridControl.DataSource = this.spbdsDSLOPTC;
             this.LOPTINCHIgridControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LOPTINCHIgridControl.Location = new System.Drawing.Point(675, 2);
+            this.LOPTINCHIgridControl.Location = new System.Drawing.Point(630, 2);
             this.LOPTINCHIgridControl.MainView = this.gridView2;
             this.LOPTINCHIgridControl.MenuManager = this.barManager1;
             this.LOPTINCHIgridControl.Name = "LOPTINCHIgridControl";
-            this.LOPTINCHIgridControl.Size = new System.Drawing.Size(720, 249);
+            this.LOPTINCHIgridControl.Size = new System.Drawing.Size(765, 249);
             this.LOPTINCHIgridControl.TabIndex = 36;
             this.LOPTINCHIgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -564,11 +559,11 @@ namespace QLDSVHTC
             this.SINHVIENgridControl.MainView = this.gridView1;
             this.SINHVIENgridControl.MenuManager = this.barManager1;
             this.SINHVIENgridControl.Name = "SINHVIENgridControl";
-            this.SINHVIENgridControl.Size = new System.Drawing.Size(673, 249);
+            this.SINHVIENgridControl.Size = new System.Drawing.Size(522, 249);
             this.SINHVIENgridControl.TabIndex = 36;
             this.SINHVIENgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.SINHVIENgridControl.Click += new System.EventHandler(this.SINHVIENgridControl_Click);
+            this.SINHVIENgridControl.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SINHVIENgridControl_MouseClick);
             // 
             // sP_getInfoSVDKIBindingSource
             // 
@@ -832,43 +827,12 @@ namespace QLDSVHTC
             // 
             this.DSLTC_HUYgridControlTableAdapter.ClearBeforeFill = true;
             // 
-            // mASSVToolStripLabel
-            // 
-            this.mASSVToolStripLabel.Name = "mASSVToolStripLabel";
-            this.mASSVToolStripLabel.Size = new System.Drawing.Size(60, 20);
-            this.mASSVToolStripLabel.Text = "MASSV:";
-            // 
-            // mASSVToolStripTextBox
-            // 
-            this.mASSVToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.mASSVToolStripTextBox.Name = "mASSVToolStripTextBox";
-            this.mASSVToolStripTextBox.Size = new System.Drawing.Size(100, 27);
-            // 
-            // fillToolStripButton
-            // 
-            this.fillToolStripButton.Name = "fillToolStripButton";
-            this.fillToolStripButton.Size = new System.Drawing.Size(29, 4);
-            // 
-            // fillToolStrip
-            // 
-            this.fillToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mASSVToolStripLabel,
-            this.mASSVToolStripTextBox,
-            this.fillToolStripButton});
-            this.fillToolStrip.Location = new System.Drawing.Point(488, 493);
-            this.fillToolStrip.Name = "fillToolStrip";
-            this.fillToolStrip.Size = new System.Drawing.Size(0, 29);
-            this.fillToolStrip.TabIndex = 60;
-            this.fillToolStrip.Text = "fillToolStrip";
-            // 
             // FormDangKi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1309, 883);
-            this.Controls.Add(this.fillToolStrip);
             this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl3);
@@ -914,8 +878,6 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
             this.panelControl7.PerformLayout();
-            this.fillToolStrip.ResumeLayout(false);
-            this.fillToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -983,10 +945,6 @@ namespace QLDSVHTC
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private System.Windows.Forms.BindingSource sP_LIST_SVHUYDANGKYBindingSource;
         private DS_SV1TableAdapters.SP_LIST_SVHUYDANGKYTableAdapter DSLTC_HUYgridControlTableAdapter;
-        private System.Windows.Forms.ToolStrip fillToolStrip;
-        private System.Windows.Forms.ToolStripLabel mASSVToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox mASSVToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillToolStripButton;
         private DevExpress.XtraGrid.GridControl DSLTC_HUYgridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraGrid.Columns.GridColumn colMALTC1;
