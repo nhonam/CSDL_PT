@@ -99,7 +99,7 @@ namespace QLDSVHTC
             this.ClientSize = new System.Drawing.Size(1144, 462);
             this.Controls.Add(this.panel1);
             this.Name = "Frpt_PHIEUDIEM";
-            this.Text = "Frpt_PHIEUDIEM";
+            this.Text = " PDIEM";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -205,7 +205,6 @@ namespace QLDSVHTC
             this.txbMatKhau.Size = new System.Drawing.Size(224, 22);
             this.txbMatKhau.TabIndex = 2;
             this.txbMatKhau.UseSystemPasswordChar = true;
-            this.txbMatKhau.TextChanged += new System.EventHandler(this.txbMatKhau_TextChanged);
             // 
             // label2
             // 
@@ -223,7 +222,6 @@ namespace QLDSVHTC
             this.txbTenLogin.Name = "txbTenLogin";
             this.txbTenLogin.Size = new System.Drawing.Size(224, 22);
             this.txbTenLogin.TabIndex = 2;
-            this.txbTenLogin.TextChanged += new System.EventHandler(this.txbTenLogin_TextChanged);
             // 
             // label1
             // 
@@ -252,7 +250,7 @@ namespace QLDSVHTC
             this.ClientSize = new System.Drawing.Size(1222, 655);
             this.Controls.Add(this.panel1);
             this.Name = "FormTaoTaiKhoan";
-            this.Text = "FormTaoTaiKhoan";
+            this.Text = " Tạo Tài Khoản";
             this.Load += new System.EventHandler(this.FormTaoTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

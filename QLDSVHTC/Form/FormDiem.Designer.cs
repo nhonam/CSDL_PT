@@ -133,7 +133,6 @@ namespace QLDSVHTC
             this.cbNhom.Name = "cbNhom";
             this.cbNhom.Size = new System.Drawing.Size(194, 24);
             this.cbNhom.TabIndex = 15;
-    
             // 
             // cbHocKi
             // 
@@ -387,7 +386,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelControl1);
             this.Name = "FormDIEM";
-            this.Text = "FormDIEM";
+            this.Text = " Điểm";
             this.Load += new System.EventHandler(this.FormDIEM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

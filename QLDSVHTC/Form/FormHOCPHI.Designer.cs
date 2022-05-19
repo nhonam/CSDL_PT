@@ -474,7 +474,6 @@ namespace QLDSVHTC
             this.CT_HOCPHIGRIDCONTROL.TabIndex = 8;
             this.CT_HOCPHIGRIDCONTROL.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            this.HOCPHIGRIDCONTROL.MouseClick += new System.Windows.Forms.MouseEventHandler(this.HOCPHIGRIDCONTROL_MouseClick);
             // 
             // sPGetCTHPSVBindingSource
             // 
@@ -535,21 +534,21 @@ namespace QLDSVHTC
             // thêmToolStripMenuItem
             // 
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.thêmToolStripMenuItem.Text = "thêm";
             this.thêmToolStripMenuItem.Click += new System.EventHandler(this.thêmToolStripMenuItem_Click);
             // 
             // ghiToolStripMenuItem
             // 
             this.ghiToolStripMenuItem.Name = "ghiToolStripMenuItem";
-            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.ghiToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.ghiToolStripMenuItem.Text = "ghi";
             this.ghiToolStripMenuItem.Click += new System.EventHandler(this.ghiToolStripMenuItem_Click);
             // 
             // phụcHồiToolStripMenuItem
             // 
             this.phụcHồiToolStripMenuItem.Name = "phụcHồiToolStripMenuItem";
-            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.phụcHồiToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.phụcHồiToolStripMenuItem.Text = "phục hồi";
             this.phụcHồiToolStripMenuItem.Click += new System.EventHandler(this.phụcHồiToolStripMenuItem_Click);
             // 
@@ -567,7 +566,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormHOCPHI";
-            this.Text = "FormHOCPHI";
+            this.Text = " Học Phí";
             this.Load += new System.EventHandler(this.FormHOCPHI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);

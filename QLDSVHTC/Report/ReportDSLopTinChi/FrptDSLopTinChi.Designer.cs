@@ -146,7 +146,7 @@ namespace QLDSVHTC
             this.ClientSize = new System.Drawing.Size(1319, 667);
             this.Controls.Add(this.panel1);
             this.Name = "FrptDSLopTinChi";
-            this.Text = "FrptDSLopTinChi";
+            this.Text = " DSLTC";
             this.Load += new System.EventHandler(this.FrptDSLopTinChi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

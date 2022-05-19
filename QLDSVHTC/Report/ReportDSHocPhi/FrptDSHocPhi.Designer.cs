@@ -30,6 +30,7 @@ namespace QLDSVHTC.Report
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbLop = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.txbNienKhoa = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@ namespace QLDSVHTC.Report
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbLop = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmHocKy)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,13 @@ namespace QLDSVHTC.Report
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1320, 270);
             this.panel1.TabIndex = 3;
+            // 
+            // cbLop
+            // 
+            this.cbLop.Location = new System.Drawing.Point(465, 52);
+            this.cbLop.Name = "cbLop";
+            this.cbLop.Size = new System.Drawing.Size(325, 22);
+            this.cbLop.TabIndex = 7;
             // 
             // btnThoat
             // 
@@ -127,13 +134,6 @@ namespace QLDSVHTC.Report
             this.label1.TabIndex = 2;
             this.label1.Text = "MÃ LỚP";
             // 
-            // cbLop
-            // 
-            this.cbLop.Location = new System.Drawing.Point(465, 52);
-            this.cbLop.Name = "cbLop";
-            this.cbLop.Size = new System.Drawing.Size(325, 22);
-            this.cbLop.TabIndex = 7;
-            // 
             // FrptDSHocPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -141,7 +141,7 @@ namespace QLDSVHTC.Report
             this.ClientSize = new System.Drawing.Size(1320, 649);
             this.Controls.Add(this.panel1);
             this.Name = "FrptDSHocPhi";
-            this.Text = "FrptDSHocPhi";
+            this.Text = "DSHP";
             this.Load += new System.EventHandler(this.FrptDSHocPhi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

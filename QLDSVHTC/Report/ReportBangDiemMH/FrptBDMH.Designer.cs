@@ -226,7 +226,7 @@ namespace QLDSVHTC
             this.ClientSize = new System.Drawing.Size(1269, 638);
             this.Controls.Add(this.panel1);
             this.Name = "FrptBDMH";
-            this.Text = "FrptBDMH";
+            this.Text = " BĐMH";
             this.Load += new System.EventHandler(this.FrptBDMH_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

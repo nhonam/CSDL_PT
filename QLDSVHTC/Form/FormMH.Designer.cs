@@ -30,11 +30,11 @@ namespace QLDSVHTC
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMH));
             System.Windows.Forms.Label mAMHLabel;
             System.Windows.Forms.Label tENMHLabel;
             System.Windows.Forms.Label sOTIET_LTLabel;
             System.Windows.Forms.Label sOTIET_THLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMH));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.bar2 = new DevExpress.XtraBars.Bar();
@@ -55,12 +55,12 @@ namespace QLDSVHTC
             this.bdsMonHoc = new System.Windows.Forms.BindingSource(this.components);
             this.MONHOCTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager = new QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager();
+            this.lOPTINCHITableAdapter = new QLDSVHTC.DS_SV1TableAdapters.LOPTINCHITableAdapter();
             this.txbMaMonHoc = new System.Windows.Forms.TextBox();
             this.txbTenMonHoc = new System.Windows.Forms.TextBox();
             this.speSoTietLT = new DevExpress.XtraEditors.SpinEdit();
             this.speSoTietTH = new DevExpress.XtraEditors.SpinEdit();
             this.bdsLopTinChi = new System.Windows.Forms.BindingSource(this.components);
-            this.lOPTINCHITableAdapter = new QLDSVHTC.DS_SV1TableAdapters.LOPTINCHITableAdapter();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.MONHOCGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -83,6 +83,42 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.MONHOCGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mAMHLabel
+            // 
+            mAMHLabel.AutoSize = true;
+            mAMHLabel.Location = new System.Drawing.Point(5, 31);
+            mAMHLabel.Name = "mAMHLabel";
+            mAMHLabel.Size = new System.Drawing.Size(50, 17);
+            mAMHLabel.TabIndex = 6;
+            mAMHLabel.Text = "MAMH:";
+            // 
+            // tENMHLabel
+            // 
+            tENMHLabel.AutoSize = true;
+            tENMHLabel.Location = new System.Drawing.Point(3, 74);
+            tENMHLabel.Name = "tENMHLabel";
+            tENMHLabel.Size = new System.Drawing.Size(57, 17);
+            tENMHLabel.TabIndex = 8;
+            tENMHLabel.Text = "TENMH:";
+            // 
+            // sOTIET_LTLabel
+            // 
+            sOTIET_LTLabel.AutoSize = true;
+            sOTIET_LTLabel.Location = new System.Drawing.Point(5, 120);
+            sOTIET_LTLabel.Name = "sOTIET_LTLabel";
+            sOTIET_LTLabel.Size = new System.Drawing.Size(78, 17);
+            sOTIET_LTLabel.TabIndex = 10;
+            sOTIET_LTLabel.Text = "SOTIET LT:";
+            // 
+            // sOTIET_THLabel
+            // 
+            sOTIET_THLabel.AutoSize = true;
+            sOTIET_THLabel.Location = new System.Drawing.Point(13, 170);
+            sOTIET_THLabel.Name = "sOTIET_THLabel";
+            sOTIET_THLabel.Size = new System.Drawing.Size(80, 17);
+            sOTIET_THLabel.TabIndex = 12;
+            sOTIET_THLabel.Text = "SOTIET TH:";
             // 
             // barManager1
             // 
@@ -270,14 +306,9 @@ namespace QLDSVHTC
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // mAMHLabel
+            // lOPTINCHITableAdapter
             // 
-            mAMHLabel.AutoSize = true;
-            mAMHLabel.Location = new System.Drawing.Point(5, 31);
-            mAMHLabel.Name = "mAMHLabel";
-            mAMHLabel.Size = new System.Drawing.Size(50, 17);
-            mAMHLabel.TabIndex = 6;
-            mAMHLabel.Text = "MAMH:";
+            this.lOPTINCHITableAdapter.ClearBeforeFill = true;
             // 
             // txbMaMonHoc
             // 
@@ -287,15 +318,6 @@ namespace QLDSVHTC
             this.txbMaMonHoc.Size = new System.Drawing.Size(100, 23);
             this.txbMaMonHoc.TabIndex = 7;
             // 
-            // tENMHLabel
-            // 
-            tENMHLabel.AutoSize = true;
-            tENMHLabel.Location = new System.Drawing.Point(3, 74);
-            tENMHLabel.Name = "tENMHLabel";
-            tENMHLabel.Size = new System.Drawing.Size(57, 17);
-            tENMHLabel.TabIndex = 8;
-            tENMHLabel.Text = "TENMH:";
-            // 
             // txbTenMonHoc
             // 
             this.txbTenMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsMonHoc, "TENMH", true));
@@ -303,15 +325,6 @@ namespace QLDSVHTC
             this.txbTenMonHoc.Name = "txbTenMonHoc";
             this.txbTenMonHoc.Size = new System.Drawing.Size(100, 23);
             this.txbTenMonHoc.TabIndex = 9;
-            // 
-            // sOTIET_LTLabel
-            // 
-            sOTIET_LTLabel.AutoSize = true;
-            sOTIET_LTLabel.Location = new System.Drawing.Point(5, 120);
-            sOTIET_LTLabel.Name = "sOTIET_LTLabel";
-            sOTIET_LTLabel.Size = new System.Drawing.Size(78, 17);
-            sOTIET_LTLabel.TabIndex = 10;
-            sOTIET_LTLabel.Text = "SOTIET LT:";
             // 
             // speSoTietLT
             // 
@@ -328,15 +341,6 @@ namespace QLDSVHTC
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.speSoTietLT.Size = new System.Drawing.Size(125, 24);
             this.speSoTietLT.TabIndex = 11;
-            // 
-            // sOTIET_THLabel
-            // 
-            sOTIET_THLabel.AutoSize = true;
-            sOTIET_THLabel.Location = new System.Drawing.Point(13, 170);
-            sOTIET_THLabel.Name = "sOTIET_THLabel";
-            sOTIET_THLabel.Size = new System.Drawing.Size(80, 17);
-            sOTIET_THLabel.TabIndex = 12;
-            sOTIET_THLabel.Text = "SOTIET TH:";
             // 
             // speSoTietTH
             // 
@@ -358,10 +362,6 @@ namespace QLDSVHTC
             // 
             this.bdsLopTinChi.DataMember = "FK_LOPTINCHI_MONHOC";
             this.bdsLopTinChi.DataSource = this.bdsMonHoc;
-            // 
-            // lOPTINCHITableAdapter
-            // 
-            this.lOPTINCHITableAdapter.ClearBeforeFill = true;
             // 
             // panelControl1
             // 
@@ -450,7 +450,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormMH";
-            this.Text = "FormMH";
+            this.Text = " Môn Học";
             this.Load += new System.EventHandler(this.FormMH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).EndInit();

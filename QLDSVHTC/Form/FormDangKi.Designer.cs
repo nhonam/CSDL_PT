@@ -844,7 +844,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormDangKi";
-            this.Text = "FormDangKi";
+            this.Text = " Đăng Ký";
             this.Load += new System.EventHandler(this.FormDangKi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

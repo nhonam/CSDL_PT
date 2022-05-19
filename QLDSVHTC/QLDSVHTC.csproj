@@ -156,6 +156,12 @@
     <Compile Include="Form\FormSV.Designer.cs">
       <DependentUpon>FormSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.Designer.cs">
+      <DependentUpon>XtraReportBangDiemTKCK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\ReportDSSVDK\FRpDSSVDK.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormSV.resx">
       <DependentUpon>FormSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.resx">
+      <DependentUpon>XtraReportBangDiemTKCK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportDSSVDK\FRpDSSVDK.resx">
       <DependentUpon>FRpDSSVDK.cs</DependentUpon>

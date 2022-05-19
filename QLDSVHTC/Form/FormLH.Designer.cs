@@ -433,7 +433,6 @@ namespace QLDSVHTC
             this.txbMaLop.Name = "txbMaLop";
             this.txbMaLop.Size = new System.Drawing.Size(191, 23);
             this.txbMaLop.TabIndex = 1;
-         
             // 
             // LOPTableAdapter
             // 
@@ -473,7 +472,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormLH";
-            this.Text = " LOP HOC";
+            this.Text = " Lớp Học";
             this.Load += new System.EventHandler(this.FormLH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

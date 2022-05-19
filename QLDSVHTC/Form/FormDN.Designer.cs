@@ -58,6 +58,7 @@ namespace QLDSVHTC
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(453, 308);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -67,7 +68,7 @@ namespace QLDSVHTC
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(175, 209);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(88, 21);
             this.checkBox1.TabIndex = 8;
@@ -80,18 +81,18 @@ namespace QLDSVHTC
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 17);
+            this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 7;
-            this.label3.Text = "PASSWORD";
+            this.label3.Text = "Mật Khẩu :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "TAI KHOAN";
+            this.label2.Text = "Tài Khoản :";
             // 
             // label1
             // 
@@ -99,9 +100,9 @@ namespace QLDSVHTC
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(21, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "KHOA : ";
+            this.label1.Text = "Khoa :";
             // 
             // btnThoat
             // 
@@ -110,7 +111,7 @@ namespace QLDSVHTC
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(149, 39);
             this.btnThoat.TabIndex = 4;
-            this.btnThoat.Text = "THOAT";
+            this.btnThoat.Text = " Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -121,7 +122,7 @@ namespace QLDSVHTC
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(149, 39);
             this.btnDangNhap.TabIndex = 3;
-            this.btnDangNhap.Text = "DANG NHAP";
+            this.btnDangNhap.Text = " Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
@@ -161,11 +162,11 @@ namespace QLDSVHTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(945, 489);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormDN";
-            this.Text = " 8";
+            this.Text = " Đăng Nhập";
             this.Load += new System.EventHandler(this.FormDN_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

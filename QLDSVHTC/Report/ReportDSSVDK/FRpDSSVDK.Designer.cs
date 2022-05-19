@@ -215,7 +215,7 @@ namespace QLDSVHTC
             this.ClientSize = new System.Drawing.Size(1222, 498);
             this.Controls.Add(this.panel1);
             this.Name = "FRpDSSVDK";
-            this.Text = "FRpDSSVDK";
+            this.Text = " DSSVDK";
             this.Load += new System.EventHandler(this.FRpDSSVDK_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

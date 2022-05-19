@@ -98,26 +98,26 @@ namespace QLDSVHTC
                            " @USERNAME = N'" + user + "', " +
                            " @ROLE = N'" + role + "' ";
 
-            if (role == "PKT" && Program.severname == ((DataRowView)Program.bds_dspm[0])["TENSERVER"].ToString())
-            {
-                // site 1 ---> sử dụng LINK2
-             /*   subLenh = " EXEC    @return_value = LINK2.QLDSV.[dbo].[SP_TAOLOGIN] " +
+            /* if (role == "PKT" && Program.severname == ((DataRowView)Program.bds_dspm[0])["TENSERVER"].ToString())
+             {
+                 // site 1 ---> sử dụng LINK2
+                 subLenh = " EXEC    @return_value = LINK2.QLDSV.[dbo].[SP_TAOLOGIN] " +
+
+                             " @LGNAME = N'" + login + "', " +
+                             " @PASS = N'" + matkhau + "', " +
+                             " @USERNAME = N'" + user + "', " +
+                             " @ROLE = N'" + role + "' ";
+             }
+             else if (role == "PKT" && Program.severname == ((DataRowView)Program.bds_dspm[1])["TENSERVER"].ToString())
+
+             {
+                 subLenh = " EXEC    @return_value = LINK2.QLDSV.[dbo].[SP_TAOLOGIN] " +
 
                             " @LGNAME = N'" + login + "', " +
                             " @PASS = N'" + matkhau + "', " +
                             " @USERNAME = N'" + user + "', " +
                             " @ROLE = N'" + role + "' ";
-            }
-            else if (role == "PKT" && Program.severname == ((DataRowView)Program.bds_dspm[1])["TENSERVER"].ToString())
-
-            {
-                subLenh = " EXEC    @return_value = LINK2.QLDSV.[dbo].[SP_TAOLOGIN] " +
-
-                           " @LGNAME = N'" + login + "', " +
-                           " @PASS = N'" + matkhau + "', " +
-                           " @USERNAME = N'" + user + "', " +
-                           " @ROLE = N'" + role + "' ";
-            }*/
+             }*/
             string strLenh = " DECLARE @return_value int " + subLenh +
                     " SELECT  'Return Value' = @return_value ";
 
@@ -151,15 +151,8 @@ namespace QLDSVHTC
 
             return;
         }
+        
 
-        private void txbTenLogin_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbMatKhau_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

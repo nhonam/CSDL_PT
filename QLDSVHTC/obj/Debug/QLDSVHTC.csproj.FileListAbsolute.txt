@@ -233,3 +233,4 @@ C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\o
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.exe
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.pdb
 C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.csproj.AssemblyReference.cache
+C:\Users\nhona\Desktop\HocKy2_Nam3\CSDLPT\đồ án\clone new\CSDL_PT\QLDSVHTC\obj\Debug\QLDSVHTC.Report.ReportBangDiemTKCK.XtraReportBangDiemTKCK.resources

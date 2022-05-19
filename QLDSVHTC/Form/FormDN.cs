@@ -19,6 +19,9 @@ namespace QLDSVHTC
         private bool isSinhVien = false;
         public FormDN()
         {
+
+
+          //  LayDSPM("SELECT * FROM LINK0.QLDSV_HTC.dbo.V_DS_PHANMANHDN");
             InitializeComponent();
         }
         private void LayDSPM(String cmd)
@@ -32,6 +35,7 @@ namespace QLDSVHTC
             cmbKhoa.DataSource = Program.bds_dspm;
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
+          
         }
         private int KetNoi_CSDLGOC()
         {
@@ -89,7 +93,7 @@ namespace QLDSVHTC
 
             if (isSinhVien == true)
             {
-                Program.mlogin = "HTKN";
+                Program.mlogin = "sv";
                 Program.password = "123";
                 if (Program.KetNoi() == 0) return;
             }
@@ -130,8 +134,8 @@ namespace QLDSVHTC
             }
 
             if (isSinhVien==true)
-            { 
-          
+            {
+              //  Program.mGroup = "SV";
             string strlenh1 = "EXEC [dbo].[SP_LayThongTinSV_DangNhap] '" + txtLogin.Text + "', '" + txtPass.Text + "'";
             SqlDataReader reader = Program.ExecSqlDataReader(strlenh1);
 
@@ -157,7 +161,6 @@ namespace QLDSVHTC
             Program.conn.Close();
             reader.Close();
         }
-            MessageBox.Show("Đăng nhập thành công !!!");
             Form f = new FormMain();
             f.ShowDialog();
 

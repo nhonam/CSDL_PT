@@ -364,7 +364,6 @@ namespace QLDSVHTC
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1253, 106);
             this.panelControl1.TabIndex = 4;
-          
             // 
             // cmbKhoa
             // 
@@ -717,7 +716,7 @@ namespace QLDSVHTC
             this.Controls.Add(this.barDockControlTop);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormSV";
-            this.Text = "SINH VIEN";
+            this.Text = " Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormSV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
