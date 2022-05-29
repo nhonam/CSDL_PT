@@ -17,6 +17,9 @@ namespace QLDSVHTC
         private SqlConnection conn_publisher = new SqlConnection();
         int vitri = 0;
         string macn = "";
+        public static string magv = "";
+        public static string mamh = "";
+
         public FormLTC()
         {
             InitializeComponent();
@@ -52,16 +55,13 @@ namespace QLDSVHTC
 
 
 
-            cbTenMonHoc.DataSource = bdsMonHoc;
-            cbTenMonHoc.DisplayMember = "TENMH";
-            cbTenMonHoc.ValueMember = "MAMH";
+          
 
             if (Program.mGroup == "KHOA")
             {
                 cbKhoa.Enabled = false;
             }
-            txbMaMonHoc.Text = cbTenMonHoc.ValueMember.ToString();
-            txbMaGiangVien.Text = cbTenGiangVien.ValueMember.ToString();
+         
 
         }
 
@@ -80,9 +80,7 @@ namespace QLDSVHTC
             dt = Program.ExecSqlDataTable(cmd);
             BindingSource bdsgv = new BindingSource();
             bdsgv.DataSource = dt;
-            cbTenGiangVien.DataSource = bdsgv;
-            cbTenGiangVien.DisplayMember = "HOTEN";
-            cbTenGiangVien.ValueMember = "MAGV";
+          
         }
 
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -145,8 +143,7 @@ namespace QLDSVHTC
             panelControl2.Enabled = true;
             bdsLopTinChi.AddNew();
             txbMaKhoa.Text = macn;
-            cbTenGiangVien.SelectedIndex = 0;
-            cbTenMonHoc.SelectedIndex = 0;
+         
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
             btnGhi.Enabled = btnPhucHoi.Enabled = true;
             lOPTINCHIGridControl.Enabled = false;
@@ -271,20 +268,7 @@ namespace QLDSVHTC
             this.Close();
         }
 
-        private void cbTenGiangVien_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (cbTenGiangVien.SelectedValue != null)
-            {
-                txbMaGiangVien.Text = cbTenGiangVien.SelectedValue.ToString();
-            }
-        }
-        private void cbTenMonHoc_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (cbTenMonHoc.SelectedValue != null)
-            {
-                txbMaMonHoc.Text = cbTenMonHoc.SelectedValue.ToString();
-            }
-        }
+      
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -293,14 +277,21 @@ namespace QLDSVHTC
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
         }
 
-        private void txbMaMonHoc_EditValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // chọn môn học
         {
-            cbTenMonHoc.SelectedValue = txbMaMonHoc.Text;
+
+            ChonMonHoc f = new ChonMonHoc();
+
+            f.ShowDialog();
+            txbMaMonHoc.Text = mamh;
         }
 
-        private void txbMaGiangVien_EditValueChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // chọn giảng viên
         {
-            cbTenGiangVien.SelectedValue = txbMaGiangVien.Text;
+            ChonGV f = new ChonGV();
+
+            f.ShowDialog();
+            txbMaGiangVien.Text = magv;
         }
     }
 }

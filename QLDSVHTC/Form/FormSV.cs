@@ -168,7 +168,7 @@ namespace QLDSVHTC
         }
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
+           // Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
             cmbKhoa.DataSource = Program.bds_dspm;
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
@@ -192,18 +192,24 @@ namespace QLDSVHTC
             }
             else
             {
+                try
+                {
+                    this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.LOPTableAdapter.Fill(this.dS_SV1.LOP);
 
-                this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.LOPTableAdapter.Fill(this.dS_SV1.LOP);
+                    this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.SINHVIENTableAdapter.Fill(this.dS_SV1.SINHVIEN);
 
-                this.SINHVIENTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.SINHVIENTableAdapter.Fill(this.dS_SV1.SINHVIEN);
-
-                this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
+                    this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
 
 
-                macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
+                    macn = ((DataRowView)bdsLOP[0])["MAKHOA"].ToString();
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Không được truy cập phòng kế toán " , "", MessageBoxButtons.OK);
+                }
+               
             }
         }
 
@@ -337,6 +343,9 @@ namespace QLDSVHTC
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
         }
 
-      
+        private void panelControl2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

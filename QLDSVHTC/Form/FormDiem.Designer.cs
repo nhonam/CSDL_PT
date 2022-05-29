@@ -310,6 +310,7 @@ namespace QLDSVHTC
             this.colMALC.FieldName = "MALC";
             this.colMALC.MinWidth = 25;
             this.colMALC.Name = "colMALC";
+            this.colMALC.OptionsColumn.ReadOnly = true;
             this.colMALC.Visible = true;
             this.colMALC.VisibleIndex = 0;
             this.colMALC.Width = 94;
@@ -319,6 +320,7 @@ namespace QLDSVHTC
             this.colMASV.FieldName = "MASV";
             this.colMASV.MinWidth = 25;
             this.colMASV.Name = "colMASV";
+            this.colMASV.OptionsColumn.ReadOnly = true;
             this.colMASV.Visible = true;
             this.colMASV.VisibleIndex = 1;
             this.colMASV.Width = 94;
@@ -328,6 +330,7 @@ namespace QLDSVHTC
             this.colHOTEN.FieldName = "HOTEN";
             this.colHOTEN.MinWidth = 25;
             this.colHOTEN.Name = "colHOTEN";
+            this.colHOTEN.OptionsColumn.ReadOnly = true;
             this.colHOTEN.Visible = true;
             this.colHOTEN.VisibleIndex = 2;
             this.colHOTEN.Width = 94;
@@ -364,6 +367,7 @@ namespace QLDSVHTC
             this.colDIEM_TK.FieldName = "DIEM_TK";
             this.colDIEM_TK.MinWidth = 25;
             this.colDIEM_TK.Name = "colDIEM_TK";
+            this.colDIEM_TK.OptionsColumn.ReadOnly = true;
             this.colDIEM_TK.Visible = true;
             this.colDIEM_TK.VisibleIndex = 6;
             this.colDIEM_TK.Width = 94;

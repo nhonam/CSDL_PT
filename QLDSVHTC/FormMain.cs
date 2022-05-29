@@ -127,17 +127,7 @@ namespace QLDSVHTC
         
         }
 
-        private void btnDangKi_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            Form frm = this.CheckExists(typeof(FormDangKi));
-            if (frm != null) frm.Activate();
-            else
-            {
-                FormDangKi f = new FormDangKi();
-                f.MdiParent = this;
-                f.Show();
-            }
-        }
+      
 
         private void barButtonItem1_ItemClick_1(object sender, ItemClickEventArgs e)
         {
@@ -260,5 +250,28 @@ namespace QLDSVHTC
                       f.Dispose();
               }
 
+        private void btnDANGKI_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormDangKi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormDangKi f = new FormDangKi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(FormDangDiemTk));
+            if (frm != null) frm.Activate();
+            else
+            {
+                FormDangDiemTk f = new FormDangDiemTk();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

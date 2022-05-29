@@ -65,6 +65,7 @@ namespace QLDSVHTC
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.DiemButtonItem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -93,10 +94,11 @@ namespace QLDSVHTC
             this.barButtonItem8,
             this.ho,
             this.btnDSLTC,
-            this.btnDSSVDK});
+            this.btnDSSVDK,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(8);
-            this.ribbonControl1.MaxItemId = 19;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpNHAPXUAT,
@@ -176,11 +178,11 @@ namespace QLDSVHTC
             // 
             this.btnDANGKI.Caption = "Đăng Ký";
             this.btnDANGKI.Id = 8;
-            this.btnDANGKI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDK.ImageOptions.Image")));
-            this.btnDANGKI.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDK.ImageOptions.LargeImage")));
+            this.btnDANGKI.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDANGKI.ImageOptions.Image")));
+            this.btnDANGKI.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDANGKI.ImageOptions.LargeImage")));
             this.btnDANGKI.Name = "btnDANGKI";
             this.btnDANGKI.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-           
+            this.btnDANGKI.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDANGKI_ItemClick_1);
             // 
             // barButtonItem3
             // 
@@ -306,6 +308,7 @@ namespace QLDSVHTC
             this.ribbonPageGroup2.ItemLinks.Add(this.ho);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDSLTC);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDSSVDK);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Danh Sách Báo Cáo ";
             // 
@@ -382,6 +385,14 @@ namespace QLDSVHTC
             // 
             this.barButtonItem2.Name = "barButtonItem2";
             // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Bảng Điểm Tống Kết Môn Học";
+            this.barButtonItem1.Id = 19;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,6 +451,7 @@ namespace QLDSVHTC
         private DevExpress.XtraBars.BarButtonItem ho;
         private DevExpress.XtraBars.BarButtonItem btnDSLTC;
         private DevExpress.XtraBars.BarButtonItem btnDSSVDK;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }
 

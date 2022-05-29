@@ -83,6 +83,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FormLopTinChi\ChonGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLopTinChi\ChonGV.Designer.cs">
+      <DependentUpon>ChonGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FormLopTinChi\ChonMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormLopTinChi\ChonMonHoc.Designer.cs">
+      <DependentUpon>ChonMonHoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,16 +108,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_SV1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\FormDangDiemTk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\FormDangDiemTk.Designer.cs">
+      <DependentUpon>FormDangDiemTk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormHOCPHI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormHOCPHI.Designer.cs">
       <DependentUpon>FormHOCPHI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FormLTC.cs">
+    <Compile Include="Form\FormLopTinChi\FormLTC.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FormLTC.Designer.cs">
+    <Compile Include="Form\FormLopTinChi\FormLTC.Designer.cs">
       <DependentUpon>FormLTC.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\FormTaoTaiKhoan.cs">
@@ -155,12 +173,6 @@
     </Compile>
     <Compile Include="Form\FormSV.Designer.cs">
       <DependentUpon>FormSV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.Designer.cs">
-      <DependentUpon>XtraReportBangDiemTKCK.cs</DependentUpon>
     </Compile>
     <Compile Include="Report\ReportDSSVDK\FRpDSSVDK.cs">
       <SubType>Form</SubType>
@@ -229,10 +241,25 @@
     <Compile Include="Report\ReportDSSVDK\XpDSSVDK.Designer.cs">
       <DependentUpon>XpDSSVDK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\XprtBangDiemTk.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportBangDiemTKCK\XprtBangDiemTk.Designer.cs">
+      <DependentUpon>XprtBangDiemTk.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\FormLopTinChi\ChonGV.resx">
+      <DependentUpon>ChonGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormLopTinChi\ChonMonHoc.resx">
+      <DependentUpon>ChonMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportBangDiemTKCK\FormDangDiemTk.resx">
+      <DependentUpon>FormDangDiemTk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormHOCPHI.resx">
       <DependentUpon>FormHOCPHI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FormLTC.resx">
+    <EmbeddedResource Include="Form\FormLopTinChi\FormLTC.resx">
       <DependentUpon>FormLTC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormTaoTaiKhoan.resx">
@@ -258,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormSV.resx">
       <DependentUpon>FormSV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\ReportBangDiemTKCK\XtraReportBangDiemTKCK.resx">
-      <DependentUpon>XtraReportBangDiemTKCK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportDSSVDK\FRpDSSVDK.resx">
       <DependentUpon>FRpDSSVDK.cs</DependentUpon>
@@ -301,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\ReportDSSVDK\XpDSSVDK.resx">
       <DependentUpon>XpDSSVDK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportBangDiemTKCK\XprtBangDiemTk.resx">
+      <DependentUpon>XprtBangDiemTk.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>

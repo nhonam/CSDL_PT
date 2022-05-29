@@ -134,7 +134,7 @@ namespace QLDSVHTC.Report
 
         }
 
-        /*void loadLOPcombobox()
+       /* void loadLOPcombobox()
         {
             DataTable dt = new DataTable();
             string cmd = "EXEC [dbo].[getAllLopByRole] " + type;
@@ -154,6 +154,8 @@ namespace QLDSVHTC.Report
 
         private void FrptDSHocPhi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dS_SV1.LOP' table. You can move, or remove it, as needed.
+          
             if (Program.mGroup.Equals("PGV") || Program.mGroup.Equals("KHOA"))
             {
                 if (KetNoiSql("DINHNHONAM\\SERVER3", Program.remotelogin, Program.remotepassword) == 0)
@@ -237,7 +239,18 @@ namespace QLDSVHTC.Report
         {
             this.Close();
         }
+
+        private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+           
+            this.tableAdapterManager.UpdateAll(this.dS_SV1);
+
+        }
+
+        private void cbLop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
-
-
 }
