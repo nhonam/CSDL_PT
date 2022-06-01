@@ -17,6 +17,7 @@ namespace QLDSVHTC
         private SqlConnection conn_publisher = new SqlConnection();
         int vitri = 0;
         string macn = "";
+       
         public static string magv = "";
         public static string mamh = "";
 
@@ -86,7 +87,7 @@ namespace QLDSVHTC
         private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
+           
             cbKhoa.DataSource = Program.bds_dspm;
             cbKhoa.DisplayMember = "TENKHOA";
             cbKhoa.ValueMember = "TENSERVER";
@@ -109,12 +110,19 @@ namespace QLDSVHTC
             }
             else
             {
-                loadGVcombobox();
-                this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
-                this.LOPTINCHITableAdapter.Fill(this.dS_SV1.LOPTINCHI);
-                this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
-                macn = ((DataRowView)bdsLopTinChi[0])["MAKHOA"].ToString();
+                try
+                {
+                    loadGVcombobox();
+                    this.LOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.LOPTINCHITableAdapter.Fill(this.dS_SV1.LOPTINCHI);
+                    this.DANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.DANGKYTableAdapter.Fill(this.dS_SV1.DANGKY);
+                    macn = ((DataRowView)bdsLopTinChi[0])["MAKHOA"].ToString();
+                }catch (Exception ex)
+                {
+                    MessageBox.Show("Không được truy cập phòng kế toán ", "", MessageBoxButtons.OK);
+                }
+               
             }
         }
 
@@ -292,6 +300,11 @@ namespace QLDSVHTC
 
             f.ShowDialog();
             txbMaGiangVien.Text = magv;
+        }
+
+        private void txbMaMonHoc_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

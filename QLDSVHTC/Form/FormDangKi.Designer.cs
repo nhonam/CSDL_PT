@@ -86,14 +86,7 @@ namespace QLDSVHTC
             this.SINHVIENgridControlITableAdapter = new QLDSVHTC.DS_SV1TableAdapters.SP_getInfoSVDKITableAdapter();
             this.tableAdapterManager = new QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager();
             this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.txbMaSVDK = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txbMaLopTinChi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.label10 = new System.Windows.Forms.Label();
             this.DSLTC_HUYgridControl = new DevExpress.XtraGrid.GridControl();
             this.sP_LIST_SVHUYDANGKYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -103,9 +96,16 @@ namespace QLDSVHTC
             this.colTENMH1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTENGV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNHOM1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panelControl8 = new DevExpress.XtraEditors.PanelControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.txbMaSVDK = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txbMaLopTinChi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.DSLTC_HUYgridControlTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.SP_LIST_SVHUYDANGKYTableAdapter();
+            this.panelControl6 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl7 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -124,13 +124,13 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DSLTC_HUYgridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_LIST_SVHUYDANGKYBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).BeginInit();
             this.panelControl8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).BeginInit();
             this.panelControl6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DSLTC_HUYgridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sP_LIST_SVHUYDANGKYBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).BeginInit();
             this.panelControl7.SuspendLayout();
             this.SuspendLayout();
@@ -253,15 +253,15 @@ namespace QLDSVHTC
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1397, 51);
+            this.barDockControlTop.Size = new System.Drawing.Size(1309, 51);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 842);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 863);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1397, 20);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1309, 20);
             // 
             // barDockControlLeft
             // 
@@ -269,15 +269,15 @@ namespace QLDSVHTC
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 51);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 791);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 812);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1397, 51);
+            this.barDockControlRight.Location = new System.Drawing.Point(1309, 51);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 791);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 812);
             // 
             // btnThem
             // 
@@ -320,7 +320,7 @@ namespace QLDSVHTC
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 51);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1397, 70);
+            this.panelControl1.Size = new System.Drawing.Size(1309, 70);
             this.panelControl1.TabIndex = 4;
             // 
             // label1
@@ -346,7 +346,7 @@ namespace QLDSVHTC
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl2.Location = new System.Drawing.Point(0, 121);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1397, 92);
+            this.panelControl2.Size = new System.Drawing.Size(1309, 92);
             this.panelControl2.TabIndex = 6;
             // 
             // cbHocKi
@@ -424,7 +424,7 @@ namespace QLDSVHTC
             this.panelControl4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl4.Location = new System.Drawing.Point(0, 213);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1397, 27);
+            this.panelControl4.Size = new System.Drawing.Size(1309, 27);
             this.panelControl4.TabIndex = 29;
             // 
             // label5
@@ -464,12 +464,12 @@ namespace QLDSVHTC
             // LOPTINCHIgridControl
             // 
             this.LOPTINCHIgridControl.DataSource = this.spbdsDSLOPTC;
-            this.LOPTINCHIgridControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LOPTINCHIgridControl.Location = new System.Drawing.Point(630, 2);
+            this.LOPTINCHIgridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LOPTINCHIgridControl.Location = new System.Drawing.Point(2, 2);
             this.LOPTINCHIgridControl.MainView = this.gridView2;
             this.LOPTINCHIgridControl.MenuManager = this.barManager1;
             this.LOPTINCHIgridControl.Name = "LOPTINCHIgridControl";
-            this.LOPTINCHIgridControl.Size = new System.Drawing.Size(765, 249);
+            this.LOPTINCHIgridControl.Size = new System.Drawing.Size(821, 263);
             this.LOPTINCHIgridControl.TabIndex = 36;
             this.LOPTINCHIgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -543,23 +543,23 @@ namespace QLDSVHTC
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.SINHVIENgridControl);
-            this.panelControl3.Controls.Add(this.LOPTINCHIgridControl);
+            this.panelControl3.Controls.Add(this.panelControl7);
+            this.panelControl3.Controls.Add(this.panelControl6);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl3.Location = new System.Drawing.Point(0, 240);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1397, 253);
+            this.panelControl3.Size = new System.Drawing.Size(1309, 271);
             this.panelControl3.TabIndex = 47;
             // 
             // SINHVIENgridControl
             // 
             this.SINHVIENgridControl.DataSource = this.sP_getInfoSVDKIBindingSource;
-            this.SINHVIENgridControl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SINHVIENgridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SINHVIENgridControl.Location = new System.Drawing.Point(2, 2);
             this.SINHVIENgridControl.MainView = this.gridView1;
             this.SINHVIENgridControl.MenuManager = this.barManager1;
             this.SINHVIENgridControl.Name = "SINHVIENgridControl";
-            this.SINHVIENgridControl.Size = new System.Drawing.Size(522, 249);
+            this.SINHVIENgridControl.Size = new System.Drawing.Size(476, 263);
             this.SINHVIENgridControl.TabIndex = 36;
             this.SINHVIENgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -635,99 +635,34 @@ namespace QLDSVHTC
             // 
             // panelControl5
             // 
+            this.panelControl5.Controls.Add(this.label10);
+            this.panelControl5.Controls.Add(this.DSLTC_HUYgridControl);
             this.panelControl5.Controls.Add(this.panelControl8);
-            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl5.Location = new System.Drawing.Point(0, 493);
+            this.panelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl5.Location = new System.Drawing.Point(0, 511);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(488, 349);
+            this.panelControl5.Size = new System.Drawing.Size(1309, 352);
             this.panelControl5.TabIndex = 58;
             // 
-            // panelControl8
+            // label10
             // 
-            this.panelControl8.Controls.Add(this.simpleButton2);
-            this.panelControl8.Controls.Add(this.txbMaSVDK);
-            this.panelControl8.Controls.Add(this.label7);
-            this.panelControl8.Controls.Add(this.label9);
-            this.panelControl8.Controls.Add(this.txbMaLopTinChi);
-            this.panelControl8.Controls.Add(this.label8);
-            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelControl8.Location = new System.Drawing.Point(2, 2);
-            this.panelControl8.Name = "panelControl8";
-            this.panelControl8.Size = new System.Drawing.Size(480, 345);
-            this.panelControl8.TabIndex = 24;
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Location = new System.Drawing.Point(354, 107);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Text = "ĐĂNG KÍ";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // txbMaSVDK
-            // 
-            this.txbMaSVDK.Location = new System.Drawing.Point(142, 72);
-            this.txbMaSVDK.Name = "txbMaSVDK";
-            this.txbMaSVDK.ReadOnly = true;
-            this.txbMaSVDK.Size = new System.Drawing.Size(172, 23);
-            this.txbMaSVDK.TabIndex = 21;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(138, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(191, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "THÔNG TIN ĐĂNG KÍ";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 114);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 17);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Mã lớp TC";
-            // 
-            // txbMaLopTinChi
-            // 
-            this.txbMaLopTinChi.Location = new System.Drawing.Point(142, 111);
-            this.txbMaLopTinChi.Name = "txbMaLopTinChi";
-            this.txbMaLopTinChi.ReadOnly = true;
-            this.txbMaLopTinChi.Size = new System.Drawing.Size(172, 23);
-            this.txbMaLopTinChi.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(47, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 17);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Mã sinh viên";
-            // 
-            // panelControl6
-            // 
-            this.panelControl6.Controls.Add(this.DSLTC_HUYgridControl);
-            this.panelControl6.Controls.Add(this.panelControl7);
-            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelControl6.Location = new System.Drawing.Point(488, 493);
-            this.panelControl6.Name = "panelControl6";
-            this.panelControl6.Size = new System.Drawing.Size(909, 349);
-            this.panelControl6.TabIndex = 59;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(636, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(497, 20);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "DANH SÁCH LỚP TÍN CHỈ SV ĐÃ ĐĂNG KÍ CÓ THỂ HỦY";
             // 
             // DSLTC_HUYgridControl
             // 
             this.DSLTC_HUYgridControl.DataSource = this.sP_LIST_SVHUYDANGKYBindingSource;
             this.DSLTC_HUYgridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DSLTC_HUYgridControl.Location = new System.Drawing.Point(2, 42);
+            this.DSLTC_HUYgridControl.Location = new System.Drawing.Point(509, 2);
             this.DSLTC_HUYgridControl.MainView = this.gridView3;
             this.DSLTC_HUYgridControl.MenuManager = this.barManager1;
             this.DSLTC_HUYgridControl.Name = "DSLTC_HUYgridControl";
-            this.DSLTC_HUYgridControl.Size = new System.Drawing.Size(905, 305);
+            this.DSLTC_HUYgridControl.Size = new System.Drawing.Size(798, 348);
             this.DSLTC_HUYgridControl.TabIndex = 1;
             this.DSLTC_HUYgridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -804,28 +739,94 @@ namespace QLDSVHTC
             this.colNHOM1.VisibleIndex = 5;
             this.colNHOM1.Width = 94;
             // 
-            // panelControl7
+            // panelControl8
             // 
-            this.panelControl7.Controls.Add(this.label10);
-            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl7.Location = new System.Drawing.Point(2, 2);
-            this.panelControl7.Name = "panelControl7";
-            this.panelControl7.Size = new System.Drawing.Size(905, 40);
-            this.panelControl7.TabIndex = 0;
+            this.panelControl8.Controls.Add(this.simpleButton2);
+            this.panelControl8.Controls.Add(this.txbMaSVDK);
+            this.panelControl8.Controls.Add(this.label7);
+            this.panelControl8.Controls.Add(this.label9);
+            this.panelControl8.Controls.Add(this.txbMaLopTinChi);
+            this.panelControl8.Controls.Add(this.label8);
+            this.panelControl8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl8.Location = new System.Drawing.Point(2, 2);
+            this.panelControl8.Name = "panelControl8";
+            this.panelControl8.Size = new System.Drawing.Size(507, 348);
+            this.panelControl8.TabIndex = 24;
             // 
-            // label10
+            // simpleButton2
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(204, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(497, 20);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "DANH SÁCH LỚP TÍN CHỈ SV ĐÃ ĐĂNG KÍ CÓ THỂ HỦY";
+            this.simpleButton2.Location = new System.Drawing.Point(354, 107);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(94, 29);
+            this.simpleButton2.TabIndex = 0;
+            this.simpleButton2.Text = "ĐĂNG KÍ";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // txbMaSVDK
+            // 
+            this.txbMaSVDK.Location = new System.Drawing.Point(142, 72);
+            this.txbMaSVDK.Name = "txbMaSVDK";
+            this.txbMaSVDK.ReadOnly = true;
+            this.txbMaSVDK.Size = new System.Drawing.Size(172, 23);
+            this.txbMaSVDK.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(138, 32);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(191, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "THÔNG TIN ĐĂNG KÍ";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(47, 114);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 17);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Mã lớp TC";
+            // 
+            // txbMaLopTinChi
+            // 
+            this.txbMaLopTinChi.Location = new System.Drawing.Point(142, 111);
+            this.txbMaLopTinChi.Name = "txbMaLopTinChi";
+            this.txbMaLopTinChi.ReadOnly = true;
+            this.txbMaLopTinChi.Size = new System.Drawing.Size(172, 23);
+            this.txbMaLopTinChi.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(47, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 17);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "Mã sinh viên";
             // 
             // DSLTC_HUYgridControlTableAdapter
             // 
             this.DSLTC_HUYgridControlTableAdapter.ClearBeforeFill = true;
+            // 
+            // panelControl6
+            // 
+            this.panelControl6.Controls.Add(this.SINHVIENgridControl);
+            this.panelControl6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelControl6.Location = new System.Drawing.Point(2, 2);
+            this.panelControl6.Name = "panelControl6";
+            this.panelControl6.Size = new System.Drawing.Size(480, 267);
+            this.panelControl6.TabIndex = 37;
+            // 
+            // panelControl7
+            // 
+            this.panelControl7.Controls.Add(this.LOPTINCHIgridControl);
+            this.panelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl7.Location = new System.Drawing.Point(482, 2);
+            this.panelControl7.Name = "panelControl7";
+            this.panelControl7.Size = new System.Drawing.Size(825, 267);
+            this.panelControl7.TabIndex = 38;
             // 
             // FormDangKi
             // 
@@ -833,7 +834,6 @@ namespace QLDSVHTC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1309, 883);
-            this.Controls.Add(this.panelControl6);
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl3);
             this.Controls.Add(this.panelControl4);
@@ -867,17 +867,17 @@ namespace QLDSVHTC
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DSLTC_HUYgridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sP_LIST_SVHUYDANGKYBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl8)).EndInit();
             this.panelControl8.ResumeLayout(false);
             this.panelControl8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl6)).EndInit();
             this.panelControl6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DSLTC_HUYgridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sP_LIST_SVHUYDANGKYBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl7)).EndInit();
             this.panelControl7.ResumeLayout(false);
-            this.panelControl7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -939,8 +939,6 @@ namespace QLDSVHTC
         private DevExpress.XtraGrid.Columns.GridColumn colHO;
         private DevExpress.XtraGrid.Columns.GridColumn colTEN;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
-        private DevExpress.XtraEditors.PanelControl panelControl6;
-        private DevExpress.XtraEditors.PanelControl panelControl7;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.PanelControl panelControl5;
         private System.Windows.Forms.BindingSource sP_LIST_SVHUYDANGKYBindingSource;
@@ -960,5 +958,7 @@ namespace QLDSVHTC
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txbMaLopTinChi;
         private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.PanelControl panelControl6;
+        private DevExpress.XtraEditors.PanelControl panelControl7;
     }
 }

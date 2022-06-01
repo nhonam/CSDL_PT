@@ -14,6 +14,8 @@ namespace QLDSVHTC
 {
     public partial class FormDangDiemTk : Form
     {
+        public static string malop = "";
+      //  public static string tenkhoa = "";
         public FormDangDiemTk()
         {
             InitializeComponent();
@@ -22,19 +24,18 @@ namespace QLDSVHTC
         private void FormDangDiemTk_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dS_SV1.LOP' table. You can move, or remove it, as needed.
-           // this.lOPTableAdapter.Fill(this.dS_SV1.LOP);
-            this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
+          
 
 
-            cbLop.DataSource = bdsLOP;
-            cbLop.DisplayMember = "MALOP";
-            cbLop.ValueMember = "TENLOP";
+            this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
 
 
+           
             cbKhoa.DataSource = Program.bds_dspm;
             cbKhoa.DisplayMember = "TENKHOA";
             cbKhoa.ValueMember = "TENSERVER";
             cbKhoa.SelectedIndex = Program.mChinhanh;
+           // tenkhoa = cbKhoa.ValueMember.ToString();
             if (Program.mGroup == "KHOA")
             {
                 cbKhoa.Enabled = false;
@@ -63,14 +64,15 @@ namespace QLDSVHTC
             }
             else
             {
-                this.lOPTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.lOPTableAdapter.Fill(this.dS_SV1.LOP);
+                this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.LOPTableAdapter.Fill(this.dS_SV1.LOP);
             }
+
         }
 
         private void btnIn_Click(object sender, EventArgs e)
         {
-            string malop = cbLop.Text;
+          
             string cmd = "SELECT TENKHOA,KHOAHOC FROM dbo.LOP,dbo.KHOA WHERE MALOP = '" + malop + "' AND KHOA.MAKHOA = LOP.MAKHOA";
             SqlDataReader reader = Program.ExecSqlDataReader(cmd);
             reader.Read();
@@ -86,15 +88,38 @@ namespace QLDSVHTC
             print.ShowPreviewDialog();
         }
 
+       
+
+      
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChonLop f = new ChonLop();
+            
+            f.ShowDialog();
+            txbMalop.Text = malop;
+           // Program.tenkhoa = 
+        }
+
+        private void cbLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void lOPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.bdsLOP.EndEdit();
+            this.bdsLop.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dS_SV1);
 
         }
 
-        private void cbLop_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbKhoa_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }

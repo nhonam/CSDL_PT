@@ -59,7 +59,7 @@ namespace QLDSVHTC
             }
 
         }
-        public static SqlDataReader ExecSqlDataReader(string strlenh)
+        public static SqlDataReader ExecSqlDataReader(string strlenh) //đọc dữ liệu trả về
         {
             SqlDataReader myreader;
             SqlCommand sqlcmd = new SqlCommand(strlenh, Program.conn);
@@ -86,7 +86,7 @@ namespace QLDSVHTC
             conn.Close();
             return dt;
         }
-        public static int ExecSqlNonQuery(string strlenh)
+        public static int ExecSqlNonQuery(string strlenh) //update, delete
         {
             SqlCommand sqlcmd = new SqlCommand(strlenh, conn);
             sqlcmd.CommandType = CommandType.Text;

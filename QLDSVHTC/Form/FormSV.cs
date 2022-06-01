@@ -90,7 +90,7 @@ namespace QLDSVHTC
                 txbDiaChi.Focus();
                 return false;
             }
-            if (PHAICheckEdit.Checked == false)
+          /*  if (PHAICheckEdit.Checked == false)
             {
                 MessageBox.Show("Phái không được thiếu!", "", MessageBoxButtons.OK);
                 PHAICheckEdit.Focus();
@@ -101,19 +101,19 @@ namespace QLDSVHTC
                 MessageBox.Show("Đang nghỉ học không được thiếu!", "", MessageBoxButtons.OK);
                 DANGHIHOCCheckEdit.Focus();
                 return false;
-            }
+            }*/
             if (_flagOptionSinhVien == "ADD")
             {
                 string query1 = " DECLARE @return_value INT " +
 
-                            " EXEC @return_value = [dbo].[SP_CHECKID] " +
+                            " EXEC @return_value = [dbo].[SP_KiemTra] " +
 
                             " @Code = N'" + txbMaSV.Text.Trim() + "',  " +
 
                             " @Type = N'MASV' " +
 
                             " SELECT  'Return Value' = @return_value ";
-
+                        
                 int resultMa = Program.CheckDataHelper(query1);
                 if (resultMa == -1)
                 {
@@ -137,7 +137,7 @@ namespace QLDSVHTC
                 {
                     string query2 = " DECLARE @return_value INT " +
 
-                            " EXEC @return_value = [dbo].[SP_CHECKID] " +
+                            " EXEC @return_value = [dbo].[SP_KiemTra] " +
 
                             " @Code = N'" + txbMaSV.Text.Trim() + "',  " +
 
@@ -168,10 +168,11 @@ namespace QLDSVHTC
         }
         private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
+            // Program.bds_dspm.Filter = "TENKHOA not LIKE 'Phòng Kế Toán%'";
             cmbKhoa.DataSource = Program.bds_dspm;
             cmbKhoa.DisplayMember = "TENKHOA";
             cmbKhoa.ValueMember = "TENSERVER";
+           // cmbKhoa.SelectedIndex = 0;
             if (cmbKhoa.SelectedValue.ToString() == "System.Data.DataRowView")
                 return;
            
@@ -285,7 +286,7 @@ namespace QLDSVHTC
             bdsSV.AddNew();
             txbMaLop.Text = ((DataRowView)bdsLOP[bdsLOP.Position])["MALOP"].ToString();
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = false;
-            btnGhi.Enabled = btnPhucHoi.Enabled = true;
+            btnGhi.Enabled = btnPhucHoi.Enabled = txbMaSV.Enabled = true;
             sINHVIENGridControl.Enabled = false;
         }
 
@@ -295,6 +296,11 @@ namespace QLDSVHTC
             {
                 this.LOPTableAdapter.Fill(this.dS_SV1.LOP);
                 this.SINHVIENTableAdapter.Fill(this.dS_SV1.SINHVIEN);
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+                btnGhi.Enabled = btnPhucHoi.Enabled = true;
+                sINHVIENGridControl.Enabled = true;
+                btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = true;
+                panelControl2.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -336,12 +342,12 @@ namespace QLDSVHTC
         {
             this.Close();
         }
-        private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+       /* private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             panelControl1.Enabled = false;
             sINHVIENGridControl.Enabled = true;
             btnThem.Enabled = btnSua.Enabled = btnXoa.Enabled = btnGhi.Enabled = true;
-        }
+        }*/
 
         private void panelControl2_Paint(object sender, PaintEventArgs e)
         {

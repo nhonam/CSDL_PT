@@ -287,7 +287,7 @@ namespace QLDSVHTC
             this.sP_BDMHGridControl.Location = new System.Drawing.Point(0, 215);
             this.sP_BDMHGridControl.MainView = this.gridView1;
             this.sP_BDMHGridControl.Name = "sP_BDMHGridControl";
-            this.sP_BDMHGridControl.Size = new System.Drawing.Size(1257, 189);
+            this.sP_BDMHGridControl.Size = new System.Drawing.Size(1257, 491);
             this.sP_BDMHGridControl.TabIndex = 8;
             this.sP_BDMHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -368,6 +368,7 @@ namespace QLDSVHTC
             this.colDIEM_TK.MinWidth = 25;
             this.colDIEM_TK.Name = "colDIEM_TK";
             this.colDIEM_TK.OptionsColumn.ReadOnly = true;
+            this.colDIEM_TK.UnboundExpression = "[DIEM_CC] * 0.1 + [DIEM_GK] * 0.3 + [DIEM_CK] * 0.6";
             this.colDIEM_TK.Visible = true;
             this.colDIEM_TK.VisibleIndex = 6;
             this.colDIEM_TK.Width = 94;

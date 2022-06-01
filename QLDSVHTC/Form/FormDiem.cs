@@ -143,6 +143,59 @@ namespace QLDSVHTC
             loadBDMH();
         }
 
+      
+
+        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GridView view = sender as GridView;
+            if (e.RowHandle == view.FocusedRowHandle)
+            {
+                e.Appearance.BackColor = Color.LawnGreen;
+            }
+        }
+
+        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        {
+            e.Handled = true;
+            SolidBrush brush = new SolidBrush(Color.FromArgb(0xC6, 0x64, 0xFF));
+            e.Graphics.FillRectangle(brush, e.Bounds);
+            e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width - 1, e.Bounds.Height));
+            Size size = ImageCollection.GetImageListSize(e.Info.ImageCollection);
+            Rectangle r = e.Bounds;
+            ImageCollection.DrawImageListImage(e.Cache, e.Info.ImageCollection, e.Info.ImageIndex,
+                    new Rectangle(r.X + (r.Width - size.Width) / 2, r.Y + (r.Height - size.Height) / 2, size.Width, size.Height));
+            brush.Dispose();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbHocKi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadNhom(cbNienKhoa.Text, cbHocKi.Text);
+            cbNhom.SelectedIndex = 0;
+           
+        }
+
+        private void cbNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            loadcbHocKi(cbNienKhoa.Text);
+            cbHocKi.SelectedIndex = 0;
+          
+        }
+
+
+        private void sINHVIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sINHVIENBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dS_SV1);
+
+        }
+
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
             BindingSource bdsTemp = (BindingSource)this.sP_BDMHGridControl.DataSource;
@@ -238,58 +291,5 @@ namespace QLDSVHTC
             this.sP_BDMHGridControl.DataSource = this.bdsDiem;
             return;
         }
-
-        private void gridView1_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GridView view = sender as GridView;
-            if (e.RowHandle == view.FocusedRowHandle)
-            {
-                e.Appearance.BackColor = Color.LawnGreen;
-            }
-        }
-
-        private void gridView1_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
-        {
-            e.Handled = true;
-            SolidBrush brush = new SolidBrush(Color.FromArgb(0xC6, 0x64, 0xFF));
-            e.Graphics.FillRectangle(brush, e.Bounds);
-            e.Graphics.DrawRectangle(Pens.Black, new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width - 1, e.Bounds.Height));
-            Size size = ImageCollection.GetImageListSize(e.Info.ImageCollection);
-            Rectangle r = e.Bounds;
-            ImageCollection.DrawImageListImage(e.Cache, e.Info.ImageCollection, e.Info.ImageIndex,
-                    new Rectangle(r.X + (r.Width - size.Width) / 2, r.Y + (r.Height - size.Height) / 2, size.Width, size.Height));
-            brush.Dispose();
-        }
-
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void cbHocKi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            loadNhom(cbNienKhoa.Text, cbHocKi.Text);
-            cbNhom.SelectedIndex = 0;
-           
-        }
-
-        private void cbNienKhoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            loadcbHocKi(cbNienKhoa.Text);
-            cbHocKi.SelectedIndex = 0;
-          
-        }
-
-
-        private void sINHVIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.sINHVIENBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dS_SV1);
-
-        }
-
-      
     }
 }

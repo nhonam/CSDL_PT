@@ -31,28 +31,31 @@ namespace QLDSVHTC
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbLop = new System.Windows.Forms.ComboBox();
+            this.txbMalop = new DevExpress.XtraEditors.TextEdit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
-            this.cbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dS_SV1 = new QLDSVHTC.DS_SV1();
-            this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
-            this.lOPTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.LOPTableAdapter();
+            this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
+            this.LOPTableAdapter = new QLDSVHTC.DS_SV1TableAdapters.LOPTableAdapter();
             this.tableAdapterManager = new QLDSVHTC.DS_SV1TableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMalop.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.cbLop);
+            this.panel1.Controls.Add(this.txbMalop);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.cbKhoa);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnIn);
-            this.panel1.Controls.Add(this.cbKhoa);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,17 +64,34 @@ namespace QLDSVHTC
             this.panel1.Size = new System.Drawing.Size(1346, 225);
             this.panel1.TabIndex = 3;
             // 
-            // cbLop
+            // txbMalop
             // 
-            this.cbLop.DataSource = this.bdsLOP;
-            this.cbLop.DisplayMember = "TENLOP";
-            this.cbLop.FormattingEnabled = true;
-            this.cbLop.Location = new System.Drawing.Point(465, 94);
-            this.cbLop.Name = "cbLop";
-            this.cbLop.Size = new System.Drawing.Size(325, 24);
-            this.cbLop.TabIndex = 7;
-            this.cbLop.ValueMember = "MALOP";
-            this.cbLop.SelectedIndexChanged += new System.EventHandler(this.cbLop_SelectedIndexChanged);
+            this.txbMalop.Location = new System.Drawing.Point(465, 95);
+            this.txbMalop.Margin = new System.Windows.Forms.Padding(4);
+            this.txbMalop.Name = "txbMalop";
+            this.txbMalop.Properties.ReadOnly = true;
+            this.txbMalop.Size = new System.Drawing.Size(246, 22);
+            this.txbMalop.TabIndex = 49;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(761, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 29);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Chọn Lớp";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKhoa.FormattingEnabled = true;
+            this.cbKhoa.Location = new System.Drawing.Point(465, 52);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(325, 24);
+            this.cbKhoa.TabIndex = 7;
+            this.cbKhoa.SelectedIndexChanged += new System.EventHandler(this.cbKhoa_SelectedIndexChanged_1);
             // 
             // btnThoat
             // 
@@ -83,6 +103,7 @@ namespace QLDSVHTC
             this.btnThoat.TabIndex = 6;
             this.btnThoat.Text = "THOÁT";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnIn
             // 
@@ -95,16 +116,6 @@ namespace QLDSVHTC
             this.btnIn.Text = "IN";
             this.btnIn.UseVisualStyleBackColor = false;
             this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKhoa.FormattingEnabled = true;
-            this.cbKhoa.Location = new System.Drawing.Point(465, 52);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(325, 24);
-            this.cbKhoa.TabIndex = 3;
-            this.cbKhoa.SelectedIndexChanged += new System.EventHandler(this.cbKhoa_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -131,14 +142,14 @@ namespace QLDSVHTC
             this.dS_SV1.DataSetName = "DS_SV1";
             this.dS_SV1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bdsLOP
+            // bdsLop
             // 
-            this.bdsLOP.DataMember = "LOP";
-            this.bdsLOP.DataSource = this.dS_SV1;
+            this.bdsLop.DataMember = "LOP";
+            this.bdsLop.DataSource = this.dS_SV1;
             // 
-            // lOPTableAdapter
+            // LOPTableAdapter
             // 
-            this.lOPTableAdapter.ClearBeforeFill = true;
+            this.LOPTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -146,7 +157,7 @@ namespace QLDSVHTC
             this.tableAdapterManager.DANGKYTableAdapter = null;
             this.tableAdapterManager.GIANGVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
+            this.tableAdapterManager.LOPTableAdapter = this.LOPTableAdapter;
             this.tableAdapterManager.LOPTINCHITableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
@@ -156,15 +167,16 @@ namespace QLDSVHTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1346, 591);
+            this.ClientSize = new System.Drawing.Size(1346, 599);
             this.Controls.Add(this.panel1);
             this.Name = "FormDangDiemTk";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormDangDiemTk_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txbMalop.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS_SV1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,15 +184,16 @@ namespace QLDSVHTC
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbLop;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnIn;
-        private System.Windows.Forms.ComboBox cbKhoa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DS_SV1 dS_SV1;
-        private System.Windows.Forms.BindingSource bdsLOP;
-        private DS_SV1TableAdapters.LOPTableAdapter lOPTableAdapter;
+        private System.Windows.Forms.ComboBox cbKhoa;
+        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.TextEdit txbMalop;
+        private System.Windows.Forms.BindingSource bdsLop;
+        private DS_SV1TableAdapters.LOPTableAdapter LOPTableAdapter;
         private DS_SV1TableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

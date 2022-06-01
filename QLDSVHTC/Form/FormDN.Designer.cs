@@ -133,6 +133,7 @@ namespace QLDSVHTC
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(271, 22);
             this.txtPass.TabIndex = 2;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtLogin
             // 
@@ -162,7 +163,7 @@ namespace QLDSVHTC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 489);
+            this.ClientSize = new System.Drawing.Size(1034, 533);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormDN";

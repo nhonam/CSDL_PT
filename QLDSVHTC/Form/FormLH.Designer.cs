@@ -328,6 +328,7 @@ namespace QLDSVHTC
             this.LopGridControl.TabIndex = 10;
             this.LopGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+          /*  this.LopGridControl.Click += new System.EventHandler(this.LopGridControl_Click);*/
             // 
             // bdsLOP
             // 

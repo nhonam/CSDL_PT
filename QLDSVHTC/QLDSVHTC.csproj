@@ -83,6 +83,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChonLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChonLop.Designer.cs">
+      <DependentUpon>ChonLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DS.cs">
+      <DependentUpon>DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormLopTinChi\ChonGV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +256,9 @@
     <Compile Include="Report\ReportBangDiemTKCK\XprtBangDiemTk.Designer.cs">
       <DependentUpon>XprtBangDiemTk.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChonLop.resx">
+      <DependentUpon>ChonLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormLopTinChi\ChonGV.resx">
       <DependentUpon>ChonGV.cs</DependentUpon>
     </EmbeddedResource>

@@ -36,6 +36,7 @@ namespace QLDSVHTC
         {
             string maGV = ((DataRowView)gIANGVIENBindingSource.Current)["MAGV"].ToString();
 
+
             /*Cach nay phai tuy bien ban moi chay duoc*/
             //Program.formDonDatHang.txtMaKho.Text = maKhoHang;
             FormLTC.magv = maGV;

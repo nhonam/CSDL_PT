@@ -209,5 +209,7 @@ namespace QLDSVHTC
                 txbMaLopTinChi.Text = ((DataRowView)bdsLopTinchi[bdsLopTinchi.Position])["MALTC"].ToString();
             }
         }
+
+       
     }
 }
